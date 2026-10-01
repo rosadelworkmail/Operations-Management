@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Operations Roles Mastery Academy | HR • QA • Senior VA • Creative Operations • Social • Subscription</title>
+<meta name="description" content="A practical, self-paced study hub for HR Operations, Quality Assurance, Account Operations, Senior Virtual Assistance, Creative Operations, Social Media Management, Subscription Account Operations, SOPs and policy documentation." />
+<style>
+:root{
+  --ink:#314052;
+  --muted:#708090;
+  --cream:#fffaf5;
+  --panel:#ffffff;
+  --line:#ece4ea;
+  --mint:#9ed9c4;
+  --mint-dark:#4f8977;
+  --peach:#f7b79e;
+  --butter:#f6df91;
+  --sky:#a9d7ef;
+  --lavender:#c9b9ee;
+  --rose:#f1a9bd;
+  --coral:#f28c83;
+  --lilac:#eee7fb;
+  --sage:var(--mint);
+  --sage-dark:var(--mint-dark);
+  --blue:var(--sky);
+  --shadow:0 14px 32px rgba(91,80,112,.10);
+  --radius:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:
+  radial-gradient(circle at 8% 4%,rgba(246,223,145,.30),transparent 22%),
+  radial-gradient(circle at 92% 8%,rgba(201,185,238,.28),transparent 24%),
+  radial-gradient(circle at 85% 78%,rgba(169,215,239,.22),transparent 22%),
+  var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;z-index:-1;border-radius:50%;pointer-events:none;filter:blur(4px);opacity:.55}
+body:before{width:220px;height:220px;left:-90px;bottom:8%;background:rgba(158,217,196,.26)}
+body:after{width:260px;height:260px;right:-110px;top:42%;background:rgba(241,169,189,.22)}
+button,input,textarea,select{font:inherit}
+.app{display:grid;grid-template-columns:270px 1fr;min-height:100vh}
+.sidebar{position:sticky;top:0;height:100vh;background:linear-gradient(180deg,#f6efff 0%,#f4fbf8 52%,#fff8ef 100%);border-right:1px solid var(--line);padding:22px 16px;overflow:auto}
+.brand{display:flex;gap:12px;align-items:center;padding:8px 10px 20px}
+.brand-mark{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(145deg,var(--butter),var(--peach),var(--rose));box-shadow:0 8px 18px rgba(242,140,131,.18);font-weight:900}
+.brand h1{font-size:16px;line-height:1.15;margin:0}.brand p{font-size:11px;color:var(--muted);margin:4px 0 0}
+.nav-group{margin:14px 0 4px}.nav-label{padding:8px 10px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}
+.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;padding:10px 12px;border-radius:13px;text-align:left;color:var(--ink);cursor:pointer;transition:.2s ease}.nav button:hover{background:rgba(255,255,255,.75);transform:translateX(2px)}.nav button.active{background:linear-gradient(90deg,#ffffff,#eef9f5);box-shadow:0 7px 18px rgba(79,137,119,.10);font-weight:800}
+.content{padding:30px;max-width:1550px;width:100%;margin:auto}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#fffdf9 0%,#fff3f1 38%,#f5efff 72%,#eefaf7 100%);border:1px solid rgba(236,228,234,.9);box-shadow:var(--shadow);border-radius:28px;padding:30px;display:grid;grid-template-columns:1.5fr .9fr;gap:24px}.hero:after{content:"";position:absolute;right:-60px;top:-70px;width:180px;height:180px;border-radius:50%;background:linear-gradient(135deg,rgba(246,223,145,.48),rgba(241,169,189,.18));pointer-events:none}
+.eyebrow{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--mint-dark)}
+.hero h2{font-size:clamp(28px,4vw,48px);line-height:1.05;margin:8px 0 12px}.hero p{color:var(--muted);max-width:850px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{border:0;border-radius:13px;padding:11px 15px;cursor:pointer;font-weight:800}.btn.primary{background:linear-gradient(135deg,var(--mint-dark),#78b49e);color:#fff;box-shadow:0 8px 18px rgba(79,137,119,.18)}.btn.alt{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.stat{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 8px 18px rgba(91,80,112,.06)}.stat b{font-size:28px;display:block}.stat span{font-size:12px;color:var(--muted)}
+.section{display:none;padding-top:22px}.section.active{display:block}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin:10px 0 18px}.section-head h3{font-size:28px;margin:0 0 5px}.section-head p{margin:0;color:var(--muted)}
+.grid{display:grid;gap:16px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:20px;box-shadow:0 8px 20px rgba(91,80,112,.06);padding:18px;transition:transform .2s ease,box-shadow .2s ease}.card:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(91,80,112,.09)}.card h4{margin:0 0 7px}.card p{margin:7px 0;color:var(--muted)}
+.badge{display:inline-block;border-radius:999px;padding:4px 9px;font-size:11px;font-weight:900;background:#f0ecf7;color:#665a7a}.badge.sage{background:#e5f7ef;color:#4f8977}.badge.peach{background:#fff0e8;color:#a36047}.badge.butter{background:#fff6d7;color:#88721f}.badge.blue{background:#e8f5fd;color:#52758a}
+.role-card{position:relative;overflow:hidden}.role-card:before{content:"";position:absolute;right:-22px;top:-24px;width:95px;height:95px;border-radius:50%;background:linear-gradient(135deg,var(--butter),var(--peach));opacity:.52}.role-card:after{content:"";position:absolute;left:-18px;bottom:-28px;width:66px;height:66px;border-radius:50%;background:var(--lavender);opacity:.22}.role-card h4{position:relative;z-index:1}.role-card small{color:var(--muted)}
+.role-list{padding-left:18px;margin:8px 0 0}.role-list li{margin:4px 0}
+.table-wrap{overflow:auto}.matrix{width:100%;border-collapse:collapse;min-width:780px}.matrix th,.matrix td{border-bottom:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}.matrix th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:#faf7ff}
+.progressbar{height:10px;background:#eeeaf4;border-radius:999px;overflow:hidden}.progressbar span{display:block;height:100%;background:linear-gradient(90deg,var(--mint),var(--sky),var(--lavender));width:0}
+.kpi{display:flex;justify-content:space-between;gap:10px;align-items:center}.kpi b{font-size:14px}.small{font-size:12px;color:var(--muted)}
+.week{border-left:5px solid var(--mint);padding-left:16px}.week.peach{border-color:var(--peach)}.week.blue{border-color:var(--sky)}.week.butter{border-color:var(--butter)}
+.lesson{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed #eee3d7}.lesson:last-child{border-bottom:0}.lesson input{margin-top:5px}.lesson-title{font-weight:750}.lesson-meta{font-size:12px;color:var(--muted)}
+.template{background:linear-gradient(135deg,#fffdf8,#fbf7ff);border:1px dashed #d9cfe4}.template pre{white-space:pre-wrap;margin:10px 0 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:#435154}
+.quiz{border:1px solid var(--line);border-radius:16px;padding:14px;background:linear-gradient(135deg,#fff,#fcf8ff)}.quiz h4{font-size:15px}.opt{display:block;padding:8px 10px;border:1px solid var(--line);border-radius:10px;margin:8px 0;cursor:pointer}.opt.correct{border-color:#7fc0a5;background:#effaf5}.opt.wrong{border-color:#e6a3a3;background:#fff1f2}
+.searchbar{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 16px}.searchbar input,.searchbar select{flex:1;min-width:180px;border:1px solid var(--line);background:rgba(255,255,255,.92);border-radius:13px;padding:11px 12px;outline:none}.searchbar input:focus,.searchbar select:focus{border-color:var(--lavender);box-shadow:0 0 0 4px rgba(201,185,238,.18)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;font-size:12px;transition:.2s ease}.chip:hover{transform:translateY(-1px)}.chip.active{background:#e9f8f2;border-color:#b8e2cf;color:var(--mint-dark);font-weight:800}
+
+.tool-levels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 18px}
+.tool-level{padding:16px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(135deg,#fff,#fbf7ff);box-shadow:0 7px 16px rgba(91,80,112,.05)}
+.tool-level:nth-child(1){border-top:4px solid var(--mint)}.tool-level:nth-child(2){border-top:4px solid var(--peach)}.tool-level:nth-child(3){border-top:4px solid var(--sky)}.tool-level:nth-child(4){border-top:4px solid var(--lavender)}
+.tool-level b{display:block;font-size:15px;margin-bottom:4px}.tool-level p{margin:0;color:var(--muted);font-size:12px}
+.tool-filter{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}.tool-filter button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;cursor:pointer;font-weight:800;color:var(--ink)}.tool-filter button.active{background:#eaf8f3;border-color:#bde3d1;color:var(--mint-dark)}
+.tool-card{position:relative;overflow:hidden}.tool-card:before{content:'';position:absolute;right:-24px;top:-24px;width:92px;height:92px;border-radius:50%;background:var(--butter);opacity:.28}.tool-card:nth-child(3n+2):before{background:var(--peach)}.tool-card:nth-child(3n+3):before{background:var(--sky)}.tool-card h4{position:relative}.tool-card .tool-meta{display:flex;gap:6px;flex-wrap:wrap;margin:7px 0 10px}
+.tool-step{padding:11px 12px;border-radius:12px;margin-top:8px}.tool-step.learn{background:#effaf5;border-left:4px solid var(--mint)}.tool-step.scenario{background:#fff2eb;border-left:4px solid var(--peach)}.tool-step.solution{background:#f3efff;border-left:4px solid var(--lavender)}.tool-step.practice{background:#eef7fc;border-left:4px solid var(--sky)}
+.tool-step b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}.tool-step p{margin:0;color:#56636d;font-size:13px}
+.tool-check{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;font-weight:800;color:var(--mint-dark)}
+.tool-check input{accent-color:var(--mint-dark)}
+.tool-link{display:inline-flex;align-items:center;gap:6px;margin-top:10px;text-decoration:none;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);font-weight:800;font-size:12px}.tool-link:hover{transform:translateY(-1px);box-shadow:0 5px 12px rgba(91,80,112,.07)}
+.workflow-map{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0}.workflow-node{padding:9px 11px;border-radius:12px;background:#fff;border:1px solid var(--line);font-weight:800;font-size:12px}.workflow-arrow{color:var(--muted);font-weight:900}
+.sim-card{background:linear-gradient(135deg,#fffaf1,#f5efff 48%,#edf9f5);border:1px solid var(--line)}
+@media(max-width:980px){.tool-levels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.tool-levels{grid-template-columns:1fr}.study-shell{grid-template-columns:1fr}.study-roles{position:relative;top:0}}
+.footer{text-align:center;color:var(--muted);font-size:12px;padding:34px 0 10px}
+.note{padding:12px 14px;border-left:4px solid var(--lavender);background:#f8f4ff;border-radius:12px;color:#5d5f6c}.warning{padding:12px 14px;border-left:4px solid var(--butter);background:#fff9e8;border-radius:12px;color:#6a5b36}
+
+.study-toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 18px}.study-toolbar input,.study-toolbar select{flex:1;min-width:220px;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 12px}.study-toolbar .mini{font-size:12px;color:var(--muted)}
+.study-shell{display:grid;grid-template-columns:290px 1fr;gap:18px}.study-roles{background:linear-gradient(180deg,#f5efff,#eefaf7 60%,#fff9ef);border:1px solid var(--line);border-radius:20px;padding:12px;height:max-content;position:sticky;top:18px;box-shadow:0 10px 22px rgba(91,80,112,.06)}.study-role-btn{display:block;width:100%;border:0;background:transparent;text-align:left;border-radius:12px;padding:11px 12px;margin-bottom:5px;cursor:pointer;color:var(--ink)}.study-role-btn:hover{background:rgba(255,255,255,.75);transform:translateX(2px)}.study-role-btn.active{background:linear-gradient(90deg,#fff,#eefaf7);box-shadow:0 7px 16px rgba(79,137,119,.10);font-weight:800}.study-role-btn small{display:block;color:var(--muted);font-weight:500;margin-top:2px}.study-main{min-width:0}.study-hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#fffdf9 0%,#fff1ec 35%,#f4efff 70%,#ecfaf5 100%);border:1px solid var(--line);border-radius:22px;padding:22px;margin-bottom:16px;box-shadow:0 10px 22px rgba(91,80,112,.06)}.study-hero:after{content:"✦";position:absolute;right:24px;top:14px;font-size:30px;color:rgba(242,140,131,.28)}.study-hero h4{font-size:26px;margin:0 0 6px}.study-hero p{margin:6px 0;color:var(--muted)}.study-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;background:#f0ecf8;color:#665d78;font-size:11px;font-weight:850;margin:0 6px 6px 0}.study-pill:nth-child(2n){background:#e8f8f1;color:#4f8977}.study-pill:nth-child(3n){background:#fff2e9;color:#a36047}.study-pill:nth-child(4n){background:#fff7d9;color:#88721f}.study-card{height:100%}.study-card h5{font-size:15px;margin:0 0 8px}.study-card .label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:900;color:var(--sage-dark)}.study-card ul{margin:8px 0 0;padding-left:18px}.study-card li{margin:5px 0}.solution{background:#effaf5;border-left:4px solid var(--mint);padding:11px 12px;border-radius:12px;color:#435a52}.scenario{background:#fff2eb;border-left:4px solid var(--peach);padding:11px 12px;border-radius:12px;color:#5d514b}.practice{background:#eef7fc;border-left:4px solid var(--sky);padding:11px 12px;border-radius:12px;color:#4e5c65}.study-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.study-actions button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 12px;cursor:pointer;font-weight:800}.study-actions button.primary{background:linear-gradient(135deg,var(--mint-dark),#78b49e);color:#fff;border-color:var(--mint-dark);box-shadow:0 7px 15px rgba(79,137,119,.14)}.study-progress{margin-top:12px}.study-progress-row{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:6px}.study-complete{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:var(--mint-dark)}
+/* Soft rainbow accents for a fun, relaxing study atmosphere */
+.grid-4 .card:nth-child(4n+1){border-top:4px solid var(--mint)}
+.grid-4 .card:nth-child(4n+2){border-top:4px solid var(--peach)}
+.grid-4 .card:nth-child(4n+3){border-top:4px solid var(--sky)}
+.grid-4 .card:nth-child(4n+4){border-top:4px solid var(--lavender)}
+.study-card{border-top:4px solid var(--mint)}
+.study-card:nth-child(2n){border-top-color:var(--peach)}
+.study-card:nth-child(3n){border-top-color:var(--lavender)}
+.study-card:nth-child(4n){border-top-color:var(--sky)}
+.section-head h3{letter-spacing:-.02em}
+::selection{background:#f6df91;color:#314052}
+@media(max-width:900px){.study-shell{grid-template-columns:1fr}.study-roles{position:relative;top:auto}.study-role-btn{display:inline-block;width:auto;margin:4px 4px 0 0}.study-role-btn small{display:none}}
+@media(max-width:1100px){.app{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.nav{grid-template-columns:repeat(3,1fr)}.nav-group{margin-top:5px}.hero{grid-template-columns:1fr}.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.content{padding:18px}.nav{grid-template-columns:repeat(2,1fr)}.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.hero{padding:20px}.stats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-mark">OA</div><div><h1>Operations Academy</h1><p>From beginner → job-ready → mastery</p></div></div>
+  <div class="nav-group"><div class="nav-label">Start</div><div class="nav">
+    <button class="active" data-target="dashboard">Dashboard</button><button data-target="role-map">Role Map</button><button data-target="roadmap">25-Week Roadmap</button><button data-target="study-guide">Study Guides</button>
+  </div></div>
+  <div class="nav-group"><div class="nav-label">Core Roles</div><div class="nav">
+    <button data-target="hr-ops">HR Operations</button><button data-target="qa-account">QA & Account Ops</button><button data-target="senior-va">Senior VA</button><button data-target="creative-ops">Creative Operations</button>
+    <button data-target="social">Social Media</button><button data-target="subscription">Subscription Ops</button><button data-target="sop-policy">SOP & Policy</button><button data-target="hr-career">HR Career Tracks</button>
+  </div></div>
+  <div class="nav-group"><div class="nav-label">Practice</div><div class="nav">
+    <button data-target="templates">Templates</button><button data-target="labs">Workflow Labs</button><button data-target="productivity-labs">Productivity Lab</button><button data-target="quizzes">Knowledge Checks</button><button data-target="portfolio-lab">Portfolio Lab</button><button data-target="glossary">Glossary</button><button data-target="advanced-lab">Advanced HR Lab</button>
+  </div></div>
+</aside>
+<main class="content">
+  <section id="dashboard" class="section active">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Career Study Hub • Built from your portfolio</div>
+        <h2>Operations Roles Mastery Academy</h2>
+        <p>One practical learning hub for the roles and capabilities presented in your portfolio: Human Resources, Quality Assurance, Account Operations, Senior Virtual Assistance, Creative Operations, Social Media Management, Subscription Account Operations, SOP / policy documentation, and expanded HR / People Operations career tracks.</p>
+        <div class="hero-actions"><button class="btn primary" onclick="scrollToSection('study-guide')">Start a Study Guide</button><button class="btn alt" onclick="scrollToSection('roadmap')">View the roadmap</button><button class="btn alt" onclick="scrollToSection('role-map')">Explore the roles</button><button class="btn alt" onclick="resetProgress()">Reset progress</button></div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="completedCount">0</b><span>Lessons completed</span></div>
+        <div class="stat"><b>125</b><span>Lessons across 25 weeks</span></div>
+        <div class="stat"><b>19</b><span>Role pathways</span></div>
+        <div class="stat"><b id="progressPct">0%</b><span>Overall progress</span></div>
+      </div>
+    </div>
+
+    <div class="section-head"><div><h3>What this academy trains</h3><p>Each skill is tied to a real-world portfolio capability.</p></div></div>
+    <div class="grid grid-4">
+      <div class="card role-card"><span class="badge sage">People</span><h4>HR Operations</h4><p>Employment records, contracts, status tracking, NTEs, evaluations, clearances, SILs, training agreements.</p></div>
+      <div class="card role-card"><span class="badge blue">Quality</span><h4>QA & Account Operations</h4><p>Audits, scorecards, calibration, trend tracking, coaching, escalation, root-cause analysis.</p></div>
+      <div class="card role-card"><span class="badge peach">Execution</span><h4>Senior VA</h4><p>Calendar, inbox, research, documentation, task ownership, follow-through, deadline control.</p></div>
+      <div class="card role-card"><span class="badge butter">Creative</span><h4>Creative Operations</h4><p>Content workflows, briefs, approvals, version control, production coordination, publishing readiness.</p></div>
+      <div class="card role-card"><span class="badge peach">Growth</span><h4>Social Media</h4><p>Planning, content systems, community handling, analytics, reporting, platform workflows.</p></div>
+      <div class="card role-card"><span class="badge sage">Accounts</span><h4>Subscription Operations</h4><p>Subscriber experience, account activity, engagement, content operations, quality monitoring, escalation.</p></div>
+      <div class="card role-card"><span class="badge blue">Systems</span><h4>SOP & Policy</h4><p>Standard operating procedures, internal policies/bylaws, checklists, control points and review cycles.</p></div>
+      <div class="card role-card"><span class="badge butter">Leadership</span><h4>Operations Thinking</h4><p>Prioritization, process improvement, metrics, risk identification, stakeholder communication and reporting.</p></div>
+    </div>
+
+    <div class="section-head"><div><h3>Your learning loop</h3><p>Every role now has a practical guide: <b>Learn → Scenario → Sample Solution → Practice → Mark Complete.</b></p></div></div>
+    <div class="grid grid-4">
+      <div class="card"><h4>1. Learn</h4><p>Understand the role, vocabulary, workflows, standards, tools and common failure points.</p></div>
+      <div class="card"><h4>2. Scenario</h4><p>Work through a realistic situation and decide what you would do, document and communicate.</p></div>
+      <div class="card"><h4>3. Sample Solution</h4><p>Compare your thinking with a structured example showing the reasoning, workflow and output.</p></div>
+      <div class="card"><h4>4. Practice</h4><p>Create a real artifact: tracker, SOP, scorecard, dashboard, brief, report or case file.</p></div>
+    </div>
+  </section>
+
+  <section id="role-map" class="section">
+    <div class="section-head"><div><h3>Role Map</h3><p>See how the roles connect instead of studying them as isolated jobs.</p></div></div>
+    <div class="table-wrap card"><table class="matrix"><thead><tr><th>Role</th><th>Primary Output</th><th>Core Skills</th><th>What “good” looks like</th></tr></thead><tbody>
+      <tr><td><b>Human Resources / HR Operations</b></td><td>Accurate employee records and controlled employee lifecycle documents</td><td>Documentation, confidentiality, policy application, deadline tracking</td><td>Complete, traceable records; timely actions; consistent standards</td></tr>
+      <tr><td><b>QA / Account Operations Supervisor</b></td><td>Reliable quality review and actionable feedback</td><td>Auditing, scoring, calibration, trend analysis, coaching</td><td>Consistent standards, clear evidence, useful feedback, escalated risk</td></tr>
+      <tr><td><b>Senior VA</b></td><td>Organized execution on behalf of a client/leader</td><td>Research, scheduling, task ownership, communication, systems</td><td>Low follow-up burden, clean documentation, deadlines under control</td></tr>
+      <tr><td><b>Creative Operations Specialist</b></td><td>Predictable content production and approvals</td><td>Briefs, content pipelines, file control, QA, coordination</td><td>Right asset, right version, right approver, right deadline</td></tr>
+      <tr><td><b>Social Media Manager</b></td><td>Planned, measured, brand-consistent publishing</td><td>Content strategy, copy, scheduling, community, analytics</td><td>Consistent cadence and evidence-based optimization</td></tr>
+      <tr><td><b>Subscription Account Operations</b></td><td>Consistent account activity and subscriber experience</td><td>Engagement, content ops, QA, response systems, escalation</td><td>Consistent activity, clear boundaries, accurate records, responsive support</td></tr>
+      <tr><td><b>SOP / Policy Specialist</b></td><td>Usable, auditable process documentation</td><td>Process mapping, control points, revision history, policy writing</td><td>Someone else can follow it without guessing</td></tr>
+      <tr><td><b>HR Generalist</b></td><td>Coordinated HR support across the employee lifecycle</td><td>Recruitment, onboarding, records, employee relations, performance, policy</td><td>HR requests move cleanly across functions with complete documentation</td></tr>
+      <tr><td><b>Employee Relations Specialist</b></td><td>Fair, well-documented employee case handling</td><td>Investigations, NTEs, case notes, communication, escalation</td><td>Cases are factual, traceable, timely and handled through defined process</td></tr>
+      <tr><td><b>Labor Relations / HR Compliance Specialist</b></td><td>Compliant and controlled HR processes</td><td>Labor standards, policy interpretation, compliance checks, documentation</td><td>Requirements are mapped to evidence, owners and review dates</td></tr>
+      <tr><td><b>Performance Management Specialist</b></td><td>Structured performance review and improvement systems</td><td>KPIs, scorecards, reviews, PIPs, calibration, coaching</td><td>Performance conversations are evidence-based and action-oriented</td></tr>
+      <tr><td><b>HRIS & People Data Specialist</b></td><td>Reliable people data and HR reporting</td><td>HRIS records, data hygiene, access controls, reports, dashboards</td><td>People data is accurate, current, secure and reportable</td></tr>
+      <tr><td><b>Talent Acquisition Specialist</b></td><td>Organized hiring pipeline and candidate experience</td><td>Job descriptions, sourcing, screening, interviews, onboarding handoff</td><td>Hiring stages, decisions and candidate communication are traceable</td></tr>
+      <tr><td><b>Learning & Development Specialist</b></td><td>Structured training and learning records</td><td>TNA, training plans, agreements, attendance, evaluations, learning records</td><td>Training has a clear objective, owner, evidence and follow-up</td></tr>
+      <tr><td><b>Compensation & Benefits Specialist</b></td><td>Accurate employee benefits and compensation administration</td><td>Leave concepts, benefits records, payroll inputs, eligibility, reconciliation</td><td>Employee entitlements and records are accurate and properly documented</td></tr>
+      <tr><td><b>People Operations Specialist</b></td><td>Smooth employee experience supported by strong systems</td><td>Employee lifecycle, HR operations, process improvement, service delivery</td><td>Employees and managers receive clear, timely and consistent support</td></tr>
+      <tr><td><b>HR Business Partner — Foundation</b></td><td>HR support connected to business and workforce needs</td><td>Workforce planning, metrics, manager support, organizational development</td><td>HR recommendations connect people processes to measurable business needs</td></tr>
+      <tr><td><b>Operations Manager</b></td><td>Stable, measurable and continuously improving operations</td><td>Capacity, KPIs, risk, process improvement, cross-functional coordination</td><td>Ownership is clear, bottlenecks are visible and improvements are tracked</td></tr>
+      <tr><td><b>Operations Lead</b></td><td>Stable systems and improved performance</td><td>Prioritization, KPIs, risk, process improvement, reporting</td><td>Fewer avoidable errors and clearer ownership</td></tr>
+    </tbody></table></div>
+    <div class="grid grid-3" style="margin-top:16px">
+      <div class="card"><h4>Foundation layer</h4><p>Communication • documentation • confidentiality • task management • quality mindset.</p></div>
+      <div class="card"><h4>Specialist layer</h4><p>HR • QA • Creative Ops • Social • Subscription • SOPs.</p></div>
+      <div class="card"><h4>Senior layer</h4><p>Prioritization • escalation • coaching • reporting • process improvement • stakeholder ownership.</p></div>
+    </div>
+  </section>
+
+  <section id="study-guide" class="section">
+  <div class="section-head"><div><h3>Role-by-Role Study Guides</h3><p>Choose a role and study it like a mini course: learn the concept, solve a scenario, compare a sample solution, then complete a practice task.</p></div></div>
+  <div class="study-toolbar">
+    <input id="studySearch" placeholder="Search roles or skills, e.g. NTE, QA, calendar, SOP, HRIS..." />
+    <select id="studyRoleSelect"><option value="">Choose a role</option></select>
+    <span class="mini">Your selected role and completion status are saved in this browser.</span>
+  </div>
+  <div class="study-shell">
+    <aside class="study-roles" id="studyRoleList"></aside>
+    <div class="study-main" id="studyGuideContent"></div>
+  </div>
+</section>
+
+<section id="roadmap" class="section">
+    <div class="section-head"><div><h3>25-Week Roadmap • 125 Lessons</h3><p>Five study lessons per week. Complete the checkbox to save progress in your browser.</p></div></div>
+    <div id="roadmapList"></div>
+  </section>
+
+  <section id="hr-ops" class="section">
+    <div class="section-head"><div><h3>HR Operations Path</h3><p>Learn to control employee documentation from onboarding through separation.</p></div></div>
+    <div class="grid grid-3">
+      <div class="card"><span class="badge sage">Records</span><h4>Employment Track Records</h4><p>Build a record structure that lets you answer: What happened? When? Under what status? What document proves it?</p><ul class="role-list"><li>Employee master data</li><li>Status history</li><li>Contract and amendment trail</li><li>Confidential filing controls</li></ul></div>
+      <div class="card"><span class="badge peach">Employee Relations</span><h4>NTEs & Evaluations</h4><p>Learn factual documentation, evidence organization, review timelines and respectful communication.</p><ul class="role-list"><li>NTE structure</li><li>Evaluation evidence</li><li>Action tracking</li><li>Closure documentation</li></ul></div>
+      <div class="card"><span class="badge blue">Lifecycle</span><h4>Clearances & Status</h4><p>Track clearance dependencies, employment status changes, return-of-property and closure steps.</p><ul class="role-list"><li>Exit checklist</li><li>Pending obligations</li><li>Status tracker</li><li>Final record review</li></ul></div>
+      <div class="card"><span class="badge butter">Leave</span><h4>SIL Records</h4><p>Maintain leave-related records according to the applicable law, company rules and approval flow.</p><ul class="role-list"><li>Request → approval → recording</li><li>Balance tracking</li><li>Document verification</li><li>Audit trail</li></ul></div>
+      <div class="card"><span class="badge sage">Training</span><h4>Training Agreements</h4><p>Create a controlled tracker showing employee, training, dates, obligations, sign-off and status.</p><ul class="role-list"><li>Agreement fields</li><li>Renewal / expiry flags</li><li>Completion evidence</li><li>Document storage</li></ul></div>
+      <div class="card"><span class="badge blue">Control</span><h4>On-Time Employment Tracking</h4><p>Build a deadline dashboard for contracts, evaluations, status updates, trainings and required documents.</p><ul class="role-list"><li>Due dates</li><li>Owner</li><li>Escalation threshold</li><li>Completion timestamp</li></ul></div>
+    </div>
+    <div class="note" style="margin-top:16px">Legal note: the academy teaches documentation and process-control skills. For any actual employment action or policy, verify the current applicable labor-law requirements and your organization's approved policy before implementation.</div>
+  </section>
+
+  <section id="qa-account" class="section">
+    <div class="section-head"><div><h3>QA & Account Operations Path</h3><p>Turn “checking work” into a repeatable, measurable quality system.</p></div></div>
+    <div class="grid grid-2">
+      <div class="card"><h4>The QA Loop</h4><p><b>Define → Sample → Review → Score → Explain → Coach → Recheck → Trend.</b></p><p>Study how each step protects consistency and creates evidence.</p></div>
+      <div class="card"><h4>Audit categories</h4><p>Accuracy • Compliance • Quality • Experience • Process adherence • Timeliness.</p><p>Use evidence, not assumptions. Record the exact issue, standard and impact.</p></div>
+      <div class="card"><h4>Calibration</h4><p>Learn how two reviewers can apply the same rubric consistently and how to resolve disagreements using documented standards.</p></div>
+      <div class="card"><h4>Root-Cause Analysis</h4><p>Separate symptom from cause using 5 Whys, process mapping and evidence review. Example: “late submission” may be caused by unclear ownership, missing reminders, or an overloaded approval step.</p></div>
+      <div class="card"><h4>Coaching Notes</h4><p>Use a structure: <b>Observation → Evidence → Standard → Impact → Expected behavior → Support → Follow-up date.</b></p></div>
+      <div class="card"><h4>Escalation</h4><p>Escalate based on severity, recurrence, customer impact, compliance risk and decision authority rather than emotion.</p></div>
+    </div>
+    <div class="grid grid-3" style="margin-top:16px">
+      <div class="card"><h4>QA Scorecard Lab</h4><p>Create 5 criteria with weights, scoring rules, pass threshold and evidence field.</p></div>
+      <div class="card"><h4>Account Audit Lab</h4><p>Audit a fictional account for consistency, response quality, activity, content readiness and escalation risk.</p></div>
+      <div class="card"><h4>QA Dashboard Lab</h4><p>Track pass rate, recurring errors, severity, coaching status and week-over-week trends.</p></div>
+    </div>
+  </section>
+
+  <section id="senior-va" class="section">
+    <div class="section-head"><div><h3>Senior VA Path</h3><p>Go beyond “task doer” into proactive, systems-based support.</p></div></div>
+    <div class="grid grid-3">
+      <div class="card"><h4>Executive Support</h4><p>Calendar management, inbox triage, meeting preparation, follow-ups, document handling and status updates.</p></div>
+      <div class="card"><h4>Research</h4><p>Define the question, identify credible sources, collect evidence, summarize findings and record assumptions.</p></div>
+      <div class="card"><h4>Task Ownership</h4><p>Track task, owner, due date, dependencies, next action and completion evidence. Never rely on memory alone.</p></div>
+      <div class="card"><h4>Communication</h4><p>Write concise updates using: Context → Action taken → Current status → Blocker → Next step.</p></div>
+      <div class="card"><h4>Meeting Operations</h4><p>Prepare agenda, files, attendance, decisions, action items and follow-up reminders.</p></div>
+      <div class="card"><h4>Proactive Operations</h4><p>Anticipate the next task, identify missing information and surface risks before the deadline.</p></div>
+    </div>
+  </section>
+
+  <section id="creative-ops" class="section">
+    <div class="section-head"><div><h3>Creative Operations Path</h3><p>Build a content-production system that can handle multiple assets without chaos.</p></div></div>
+    <div class="grid grid-2">
+      <div class="card"><h4>Creative Workflow</h4><p>Brief → Assign → Produce → Internal QA → Stakeholder Review → Revision → Approval → Publish → Archive → Learn.</p></div>
+      <div class="card"><h4>Briefing</h4><p>A strong brief answers: objective, audience, key message, format, references, CTA, deadline, owner and approval path.</p></div>
+      <div class="card"><h4>Version Control</h4><p>Use predictable names, version numbers, final markers and an archive rule. Avoid “final-final2-revised”.</p></div>
+      <div class="card"><h4>Content QA</h4><p>Review copy, claims, links, formatting, brand consistency, required assets, dimensions and approval status.</p></div>
+      <div class="card"><h4>Production Capacity</h4><p>Estimate work by asset type, review rounds, dependencies and available creator/editor hours.</p></div>
+      <div class="card"><h4>Creative Reporting</h4><p>Track throughput, cycle time, revision rounds, on-time rate, blockers and learnings.</p></div>
+    </div>
+  </section>
+
+  <section id="social" class="section">
+    <div class="section-head"><div><h3>Social Media Management Path</h3><p>Connect planning, creation, publishing, community and analytics.</p></div></div>
+    <div class="grid grid-3">
+      <div class="card"><h4>Content Strategy</h4><p>Set content pillars, audience purpose, platform role, cadence and measurement.</p></div>
+      <div class="card"><h4>Content Calendar</h4><p>Plan ideas by date, platform, format, owner, asset status, caption status and approval.</p></div>
+      <div class="card"><h4>Community Workflow</h4><p>Triage comments and messages by category: routine, support, lead, sensitive issue, escalation.</p></div>
+      <div class="card"><h4>Analytics</h4><p>Learn reach, engagement, views, clicks, saves, shares, follower movement and content-level comparisons.</p></div>
+      <div class="card"><h4>Reporting</h4><p>Summarize what changed, what worked, what underperformed, why it may have happened and what to test next.</p></div>
+      <div class="card"><h4>Quality Control</h4><p>Check spelling, links, tags, handles, CTA, design, claims, timing and approvals before publishing.</p></div>
+    </div>
+  </section>
+
+  <section id="subscription" class="section">
+    <div class="section-head"><div><h3>Subscription Account Operations Path</h3><p>Train for structured account activity, subscriber experience and quality monitoring.</p></div></div>
+    <div class="grid grid-3">
+      <div class="card"><h4>Account Quality</h4><p>Keep profile, content, messaging and scheduled activity consistent with the account's standards.</p></div>
+      <div class="card"><h4>Fan / Subscriber Experience</h4><p>Learn response tone, boundaries, response queues, personalization and escalation handling.</p></div>
+      <div class="card"><h4>Performance Monitoring</h4><p>Track response speed, activity consistency, content throughput, conversion-related signals and recurring complaints.</p></div>
+      <div class="card"><h4>Schedule Consistency</h4><p>Build a recurring operating rhythm for content, engagement, QA checks and reporting.</p></div>
+      <div class="card"><h4>Risk & Escalation</h4><p>Document sensitive cases, policy concerns, refund/support needs and issues requiring manager intervention.</p></div>
+      <div class="card"><h4>Continuous Improvement</h4><p>Review recurring friction, update scripts/checklists and test process changes with evidence.</p></div>
+    </div>
+  </section>
+
+  <section id="sop-policy" class="section">
+    <div class="section-head"><div><h3>SOP, Policy & Internal Bylaw Path</h3><p>Write documents that people can actually use.</p></div></div>
+    <div class="grid grid-2">
+      <div class="card"><h4>SOP anatomy</h4><p><b>Purpose → Scope → Definitions → Owner → Inputs → Steps → Control points → Exceptions → Records → Escalation → Revision history.</b></p></div>
+      <div class="card"><h4>Internal policy / bylaw anatomy</h4><p><b>Title → Authority / basis → Purpose → Coverage → Rules → Roles → Exceptions → Enforcement / consequences → Review date.</b></p></div>
+      <div class="card"><h4>Process mapping</h4><p>Map who starts the process, what happens next, where approval occurs, what evidence is stored and where the process can fail.</p></div>
+      <div class="card"><h4>Compliance checklist</h4><p>For each requirement, define evidence, responsible person, frequency, due date and verification method.</p></div>
+      <div class="card"><h4>Policy review cycle</h4><p>Review new legal requirements, process changes, audit findings, recurring incidents and business changes; then document revisions.</p></div>
+      <div class="card"><h4>Writing standard</h4><p>Use clear verbs, measurable requirements, specific owners and unambiguous deadlines. Avoid vague phrases such as “as soon as possible.”</p></div>
+    </div>
+    <div class="warning" style="margin-top:16px">For real company policies or bylaws, confirm the current legal basis and obtain the appropriate internal approval before release.</div>
+  </section>
+
+  <section id="hr-career" class="section">
+    <div class="section-head"><div><h3>HR & People Operations Career Tracks</h3><p>Expand beyond HR Associate into specialist, operations and business-partner pathways.</p></div></div>
+    <div class="grid grid-3">
+      <div class="card role-card"><span class="badge sage">HR Generalist</span><h4>HR Generalist</h4><p>Build broad HR capability across recruitment, onboarding, employee records, relations, performance and policy.</p><ul class="role-list"><li>Employee lifecycle</li><li>Cross-functional HR service</li><li>HR documentation</li><li>Manager support</li></ul></div>
+      <div class="card role-card"><span class="badge peach">Employee Relations</span><h4>Employee Relations Specialist</h4><p>Strengthen your NTE, investigation, employee-case documentation and structured communication skills.</p><ul class="role-list"><li>Case intake</li><li>Evidence handling</li><li>Fact-finding</li><li>Resolution records</li></ul></div>
+      <div class="card role-card"><span class="badge blue">Compliance</span><h4>Labor Relations / HR Compliance</h4><p>Learn to translate applicable labor requirements and company standards into controlled HR processes.</p><ul class="role-list"><li>Compliance matrix</li><li>Policy basis</li><li>Documentation controls</li><li>Review calendar</li></ul></div>
+      <div class="card role-card"><span class="badge butter">Performance</span><h4>Performance Management Specialist</h4><p>Turn KPIs and evaluations into a complete performance-management workflow.</p><ul class="role-list"><li>KPI design</li><li>Review cycles</li><li>Calibration</li><li>PIP fundamentals</li></ul></div>
+      <div class="card role-card"><span class="badge sage">Data</span><h4>HRIS & People Data Specialist</h4><p>Develop data accuracy, reporting and HR information-system discipline.</p><ul class="role-list"><li>Data hygiene</li><li>Access controls</li><li>HR dashboards</li><li>Reporting</li></ul></div>
+      <div class="card role-card"><span class="badge peach">Talent</span><h4>Talent Acquisition Specialist</h4><p>Learn the hiring funnel from job requirement to candidate handoff and onboarding.</p><ul class="role-list"><li>Job analysis</li><li>Sourcing</li><li>Screening</li><li>Interview coordination</li></ul></div>
+      <div class="card role-card"><span class="badge blue">L&D</span><h4>Learning & Development Specialist</h4><p>Build training systems that connect learning needs, agreements, attendance and follow-up.</p><ul class="role-list"><li>Training needs analysis</li><li>Training plans</li><li>Evaluation</li><li>Learning records</li></ul></div>
+      <div class="card role-card"><span class="badge butter">Rewards</span><h4>Compensation & Benefits</h4><p>Understand the operational side of benefits, leave administration, eligibility and payroll inputs.</p><ul class="role-list"><li>Benefit records</li><li>Leave concepts</li><li>Eligibility tracking</li><li>Reconciliation</li></ul></div>
+      <div class="card role-card"><span class="badge sage">People Ops</span><h4>People Operations Specialist</h4><p>Combine employee experience, HR service delivery and operational process improvement.</p><ul class="role-list"><li>HR service desk</li><li>Lifecycle workflows</li><li>Service metrics</li><li>Continuous improvement</li></ul></div>
+      <div class="card role-card"><span class="badge peach">Business Partner</span><h4>HR Business Partner — Foundation</h4><p>Learn to connect workforce needs, manager support, people metrics and organizational priorities.</p><ul class="role-list"><li>Workforce planning</li><li>People metrics</li><li>Manager consultation</li><li>Org development basics</li></ul></div>
+      <div class="card role-card"><span class="badge blue">Operations</span><h4>Operations Manager</h4><p>Move from completing tasks to owning capacity, performance, risks, systems and cross-functional execution.</p><ul class="role-list"><li>Capacity planning</li><li>Operational KPIs</li><li>Risk management</li><li>Process improvement</li></ul></div>
+      <div class="card"><h4>Career progression practice</h4><p>Use the academy in layers: <b>HR Associate → HR Operations / Generalist → Specialist → People Operations / Operations Lead → HRBP or Operations Manager</b>.</p><p class="small">Titles vary by company. Use the skill map, not the title alone, to compare opportunities.</p></div>
+    </div>
+    <div class="note" style="margin-top:16px">For real HR compliance work, verify the current applicable labor-law requirements, regulations and your organization's approved policies before implementing any employee action, policy or bylaw.</div>
+  </section>
+
+  <section id="templates" class="section">
+    <div class="section-head"><div><h3>Templates Library</h3><p>Copy, customize and use these as practice outputs.</p></div></div>
+    <div class="grid grid-2">
+      <div class="card template"><h4>QA Scorecard</h4><pre>Account / Employee:
+Reviewer:
+Review Date:
+
+Criterion | Weight | Score | Evidence
+Accuracy   | 25%    |       |
+Compliance | 20%    |       |
+Quality    | 20%    |       |
+Experience | 20%    |       |
+Timeliness | 15%    |       |
+
+Overall Score:
+Key Strength:
+Key Gap:
+Action Required:
+Follow-up Date:</pre></div>
+      <div class="card template"><h4>Employment Track Record</h4><pre>Employee:
+Employee ID:
+Start Date:
+Current Status:
+
+Date | Event / Status | Document | Owner | Notes
+
+Latest Review:
+Pending Items:
+Next Due Date:</pre></div>
+      <div class="card template"><h4>Training Agreement Tracker</h4><pre>Employee | Training | Agreement Date | End/Expiry | Sign-off | Completion | Document Link | Status</pre></div>
+      <div class="card template"><h4>Clearance Tracker</h4><pre>Employee:
+Department:
+Last Working Day:
+
+Department / Owner | Requirement | Submitted | Verified | Pending | Remarks</pre></div>
+      <div class="card template"><h4>SIL / Leave Tracker</h4><pre>Employee | Leave Type | Request Date | Approval | Covered Dates | Recorded | Supporting Doc | Notes</pre></div>
+      <div class="card template"><h4>Review & Deadline Tracker</h4><pre>Task | Owner | Priority | Due Date | Status | Blocker | Escalation Date | Completion Timestamp</pre></div>
+      <div class="card template"><h4>SOP Template</h4><pre>Title:
+Purpose:
+Scope:
+Owner:
+Inputs:
+Procedure:
+1.
+2.
+3.
+Control Points:
+Exceptions:
+Records:
+Escalation:
+Version:
+Review Date:</pre></div>
+      <div class="card template"><h4>Coaching Note</h4><pre>Observation:
+Evidence:
+Standard:
+Impact:
+Expected Behavior:
+Support Provided:
+Follow-up Date:
+Reviewer:</pre></div>
+      <div class="card template"><h4>HR Compliance Matrix</h4><pre>Requirement | Applicable Source | Evidence | Owner | Frequency | Due Date | Status | Review Date
+
+Open Gaps:
+Risk Level:
+Action Owner:</pre></div>
+      <div class="card template"><h4>Performance Improvement Plan</h4><pre>Employee:
+Role:
+Review Period:
+Performance Gap:
+Evidence / KPI:
+Expected Standard:
+Support / Coaching:
+Check-in Dates:
+Outcome Criteria:
+Final Review:</pre></div>
+      <div class="card template"><h4>Training Needs Analysis</h4><pre>Team / Employee:
+Role Requirement:
+Current Skill Evidence:
+Gap:
+Business Impact:
+Training Objective:
+Method:
+Target Date:
+Evaluation Method:</pre></div>
+      <div class="card template"><h4>HRIS Data Audit</h4><pre>Field | Expected Value | Current Value | Error Type | Source Document | Corrected | Reviewer | Date
+
+Accuracy Rate:
+Recurring Data Issue:</pre></div>
+    </div>
+  </section>
+
+  <section id="labs" class="section">
+    <div class="section-head"><div><h3>Workflow Labs</h3><p>Each lab is designed to create something you can show in an interview or portfolio.</p></div></div>
+    <div class="grid grid-3">
+      <div class="card"><span class="badge sage">Lab 01</span><h4>HR Record Control</h4><p>Create a mock employee lifecycle tracker for 10 employees covering contracts, status, training, evaluation and clearance.</p><p><b>Deliverable:</b> one tracker + one control checklist.</p></div>
+      <div class="card"><span class="badge blue">Lab 02</span><h4>QA Audit Sprint</h4><p>Review 10 fictional account interactions, score them, identify trends and write 3 coaching notes.</p><p><b>Deliverable:</b> scorecard + mini dashboard + coaching notes.</p></div>
+      <div class="card"><span class="badge peach">Lab 03</span><h4>Senior VA Command Center</h4><p>Build a daily operating board for calendar, inbox, tasks, deadlines, dependencies and executive follow-ups.</p><p><b>Deliverable:</b> dashboard + daily update format.</p></div>
+      <div class="card"><span class="badge butter">Lab 04</span><h4>Creative Content Pipeline</h4><p>Design a content workflow from brief to publish, including owners, approval points and file naming.</p><p><b>Deliverable:</b> workflow map + content tracker + QA checklist.</p></div>
+      <div class="card"><span class="badge peach">Lab 05</span><h4>Social Media Month</h4><p>Create a 30-day content calendar, community triage rules and a weekly reporting template for a fictional brand.</p><p><b>Deliverable:</b> calendar + reporting sheet.</p></div>
+      <div class="card"><span class="badge sage">Lab 06</span><h4>Subscription Account QA</h4><p>Create an account health review covering activity, engagement, content readiness, response consistency and escalation risk.</p><p><b>Deliverable:</b> audit checklist + account health report.</p></div>
+      <div class="card"><span class="badge blue">Lab 07</span><h4>SOP Redesign</h4><p>Take a messy process and rewrite it into a clean SOP with owners, control points and exceptions.</p><p><b>Deliverable:</b> before/after process map + revised SOP.</p></div>
+      <div class="card"><span class="badge butter">Lab 08</span><h4>Root-Cause Workshop</h4><p>Analyze a recurring error and use 5 Whys + process mapping to propose a control improvement.</p><p><b>Deliverable:</b> RCA report + improvement proposal.</p></div>
+      <div class="card"><span class="badge blue">Lab 09</span><h4>30–60–90 Day Plan</h4><p>Create an entry plan for an Account Operations / QA or Senior VA role showing learning, quick wins, metrics and process improvements.</p><p><b>Deliverable:</b> one-page 30–60–90 plan.</p></div>
+    </div>
+  </section>
+
+  <section id="advanced-lab" class="section">
+    <div class="section-head"><div><h3>Advanced HR & People Operations Lab</h3><p>Practice the specialist work that expands your HR Associate foundation.</p></div></div>
+    <div class="grid grid-3">
+      <div class="card"><span class="badge sage">Lab 10</span><h4>HR Generalist Caseboard</h4><p>Build a weekly board covering recruitment, onboarding, employee cases, records, performance and pending HR actions.</p><p><b>Deliverable:</b> HR service dashboard + priority report.</p></div>
+      <div class="card"><span class="badge peach">Lab 11</span><h4>Employee Relations Case File</h4><p>Create a fictional case file from incident intake through fact-finding, NTE, evaluation and closure documentation.</p><p><b>Deliverable:</b> case chronology + evidence index + communication log.</p></div>
+      <div class="card"><span class="badge blue">Lab 12</span><h4>Compliance Control Room</h4><p>Map selected HR requirements to evidence, owners, deadlines and review controls.</p><p><b>Deliverable:</b> compliance matrix + review calendar.</p></div>
+      <div class="card"><span class="badge butter">Lab 13</span><h4>Performance Cycle Design</h4><p>Design a quarterly KPI and evaluation workflow with calibration, coaching and improvement-plan checkpoints.</p><p><b>Deliverable:</b> performance cycle map + KPI scorecard.</p></div>
+      <div class="card"><span class="badge sage">Lab 14</span><h4>Recruitment-to-Onboarding System</h4><p>Map requisition, sourcing, screening, interview, offer, contract and onboarding handoffs.</p><p><b>Deliverable:</b> hiring pipeline + onboarding checklist.</p></div>
+      <div class="card"><span class="badge peach">Lab 15</span><h4>Training & L&D System</h4><p>Build a training-needs workflow connected to agreements, attendance, evaluation and renewal/expiry tracking.</p><p><b>Deliverable:</b> TNA + training tracker + evaluation form.</p></div>
+      <div class="card"><span class="badge blue">Lab 16</span><h4>People Data Audit</h4><p>Audit a fictional HRIS dataset for missing fields, inconsistent status, duplicate records and documentation gaps.</p><p><b>Deliverable:</b> data-quality report + correction log.</p></div>
+      <div class="card"><span class="badge butter">Lab 17</span><h4>People Operations Service Desk</h4><p>Create a request-intake and SLA system for common employee and manager requests.</p><p><b>Deliverable:</b> intake form + SLA matrix + service dashboard.</p></div>
+      <div class="card"><span class="badge sage">Lab 18</span><h4>Operations Manager Simulation</h4><p>Manage a fictional weekly operation with staffing constraints, missed deadlines, QA trends and competing priorities.</p><p><b>Deliverable:</b> operating review + action plan + KPI dashboard.</p></div>
+    </div>
+  </section>
+
+
+  <section id="productivity-labs" class="section">
+    <div class="section-head">
+      <div>
+        <h3>🧪 Productivity & Workflow Labs</h3>
+        <p>Learn the tools by building real workflows. Every lab follows <b>Learn → Scenario → Sample Solution → Practice → Evidence</b>.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;background:linear-gradient(135deg,#fffdf9,#fff1ec 38%,#f4efff 72%,#ecfaf5)">
+      <div class="eyebrow">How to use this section</div>
+      <h4 style="margin:0 0 6px">Don't just learn the app. Learn the system.</h4>
+      <p style="margin:0;color:var(--muted)">You will practice choosing the right tool, designing the workflow, setting up the tracker, documenting the process, testing the handoff and explaining the result like a working professional.</p>
+    </div>
+
+    <div class="tool-levels">
+      <div class="tool-level"><b>🌱 Level 1 • Foundation</b><p>Google Sheets, Forms, Drive and Calendar. Build reliable records, deadlines and documentation.</p></div>
+      <div class="tool-level"><b>🌼 Level 2 • Productivity</b><p>Notion and Trello. Turn tasks, knowledge and recurring work into visible systems.</p></div>
+      <div class="tool-level"><b>🌤️ Level 3 • Professional Ops</b><p>ClickUp, Asana and Airtable. Practice team workflows, structured data and operational reporting.</p></div>
+      <div class="tool-level"><b>✨ Level 4 • Automation</b><p>Zapier and Make. Connect triggers, actions, approvals and notifications without losing control.</p></div>
+    </div>
+
+    <div class="tool-filter" id="toolFilter">
+      <button class="active" data-tool-level="all">All Labs</button>
+      <button data-tool-level="foundation">🌱 Foundation</button>
+      <button data-tool-level="productivity">🌼 Productivity</button>
+      <button data-tool-level="professional">🌤️ Professional Ops</button>
+      <button data-tool-level="automation">✨ Automation</button>
+    </div>
+
+    <div class="grid grid-2" id="toolLabGrid">
+      <div class="card tool-card" data-tool-level="foundation">
+        <span class="badge sage">Foundation Lab 01</span><h4>Google Sheets • Control Tracker</h4>
+        <div class="tool-meta"><span class="study-pill">HR</span><span class="study-pill">QA</span><span class="study-pill">VA</span><span class="study-pill">All Ops</span></div>
+        <div class="tool-step learn"><b>Learn</b><p>Build structured tables with clear headers, data validation, dates, status fields, filters and simple KPI formulas. Treat the sheet as a controlled operational record.</p></div>
+        <div class="tool-step scenario"><b>Scenario</b><p>You must track 15 employees with contracts, training, evaluation, clearance, SIL and next-due dates. Three records are overdue and two have missing documents.</p></div>
+        <div class="tool-step solution"><b>Sample Solution</b><p>Create one master tracker, use controlled status values, add due-date logic, separate missing-document exceptions, assign owners and add a weekly review column. Avoid free-text statuses that create inconsistent reporting.</p></div>
+        <div class="tool-step practice"><b>Practice</b><p>Build the tracker for 10 fictional employees. Add a dashboard for total records, overdue items, missing documents and completion rate.</p></div>
+        <label class="tool-check"><input type="checkbox" data-tool-check="gsheets"> Mark lab complete</label>
+        <a class="tool-link" href="https://workspace.google.com/products/sheets/" target="_blank" rel="noopener">Open Google Sheets ↗</a>
+      </div>
+
+      <div class="card tool-card" data-tool-level="foundation">
+        <span class="badge peach">Foundation Lab 02</span><h4>Google Forms + Sheets • Intake System</h4>
+        <div class="tool-meta"><span class="study-pill">HR Requests</span><span class="study-pill">QA Reviews</span><span class="study-pill">VA</span></div>
+        <div class="tool-step learn"><b>Learn</b><p>Use forms to standardize intake so requests arrive with the information needed to act without repeated back-and-forth.</p></div>
+        <div class="tool-step scenario"><b>Scenario</b><p>Employees send clearance and HR requests through chat, email and verbal conversations. Information is often incomplete.</p></div>
+        <div class="tool-step solution"><b>Sample Solution</b><p>Create one request form with request type, employee, urgency, due date, supporting document and preferred contact. Route responses into a tracker and add an owner/status workflow.</p></div>
+        <div class="tool-step practice"><b>Practice</b><p>Create an HR Request Form and test it with five fictional submissions. Review which questions prevented follow-up messages.</p></div>
+        <label class="tool-check"><input type="checkbox" data-tool-check="gforms"> Mark lab complete</label>
+        <a class="tool-link" href="https://workspace.google.com/products/forms/" target="_blank" rel="noopener">Open Google Forms ↗</a>
+      </div>
+
+      <div class="card tool-card" data-tool-level="foundation">
+        <span class="badge butter">Foundation Lab 03</span><h4>Google Drive • Document Control</h4>
+        <div class="tool-meta"><span class="study-pill">HR Records</span><span class="study-pill">SOP</span><span class="study-pill">Creative Ops</span></div>
+        <div class="tool-step learn"><b>Learn</b><p>Practice folder structures, naming conventions, ownership, access control, version awareness and archive rules.</p></div>
+        <div class="tool-step scenario"><b>Scenario</b><p>An SOP has four copies in different folders and the team is unsure which version is approved.</p></div>
+        <div class="tool-step solution"><b>Sample Solution</b><p>Create a single approved location, use a naming convention with version/date, keep an archive folder for older versions, and document who owns approval and review dates.</p></div>
+        <div class="tool-step practice"><b>Practice</b><p>Build a fictional HR + Operations Drive structure containing Records, SOPs, Templates, Reports, Working Files and Archive.</p></div>
+        <label class="tool-check"><input type="checkbox" data-tool-check="gdrive"> Mark lab complete</label>
+        <a class="tool-link" href="https://workspace.google.com/products/drive/" target="_blank" rel="noopener">Open Google Drive ↗</a>
+      </div>
+
+      <div class="card tool-card" data-tool-level="foundation">
+        <span class="badge blue">Foundation Lab 04</span><h4>Google Calendar • Deadline System</h4>
+        <div class="tool-meta"><span class="study-pill">Senior VA</span><span class="study-pill">HR</span><span class="study-pill">Operations</span></div>
+        <div class="tool-step learn"><b>Learn</b><p>Use recurring events, time blocks, reminders and review windows to protect work that is easy to forget but costly to miss.</p></div>
+        <div class="tool-step scenario"><b>Scenario</b><p>You have weekly employee reviews, monthly reports, training expiry checks and daily account QA. Deadlines overlap.</p></div>
+        <div class="tool-step solution"><b>Sample Solution</b><p>Create recurring review blocks, deadline reminders before due dates, and a weekly planning session. Connect calendar commitments to the task tracker rather than keeping separate lists with different dates.</p></div>
+        <div class="tool-step practice"><b>Practice</b><p>Build a fictional one-week calendar with recurring HR, QA, VA and creative operations commitments.</p></div>
+        <label class="tool-check"><input type="checkbox" data-tool-check="gcal"> Mark lab complete</label>
+        <a class="tool-link" href="https://calendar.google.com/" target="_blank" rel="noopener">Open Google Calendar ↗</a>
+      </div>
+
+      <div class="card tool-card" data-tool-level="productivity">
+        <span class="badge sage">Productivity Lab 05</span><h4>Notion • Operations Command Center</h4>
+        <div class="tool-meta"><span class="study-pill">HR Ops</span><span class="study-pill">VA</span><span class="study-pill">SOP</span><span class="study-pill">Knowledge Base</span></div>
+        <div class="tool-step learn"><b>Learn</b><p>Practice using databases and views to bring tasks, SOPs, meeting notes, role knowledge and recurring work into a connected workspace.</p></div>
+        <div class="tool-step scenario"><b>Scenario</b><p>You support several workflows and repeatedly search through documents to find the latest SOP, action item or deadline.</p></div>
+        <div class="tool-step solution"><b>Sample Solution</b><p>Create a homepage with linked databases for Tasks, SOPs, Meetings and Reference. Use filtered views for Today, Overdue, Waiting and This Week.</p></div>
+        <div class="tool-step practice"><b>Practice</b><p>Build a personal Operations Command Center with a task database, SOP library and weekly review page.</p></div>
+        <label class="tool-check"><input type="checkbox" data-tool-check="notion"> Mark lab complete</label>
+        <a class="tool-link" href="https://www.notion.com/" target="_blank" rel="noopener">Open Notion ↗</a>
+      </div>
+
+      <div class="card tool-card" data-tool-level="productivity">
+        <span class="badge peach">Productivity Lab 06</span><h4>Trello • Visual Workflow Board</h4>
+        <div class="tool-meta"><span class="study-pill">Creative Ops</span><span class="study-pill">VA</span><span class="study-pill">Social</span></div>
+        <div class="tool-step learn"><b>Learn</b><p>Practice a simple Kanban-style flow: Backlog → Ready → In Progress → Review → Approved → Done. Use cards, checklists and due dates consistently.</p></div>
+        <div class="tool-step scenario"><b>Scenario</b><p>A social-media team keeps losing track of which posts are waiting for design, approval or a caption revision.</p></div>
+        <div class="tool-step solution"><b>Sample Solution</b><p>Make the workflow stages visible, define one meaning per column, put the owner and due date on every card, and use checklists for repeatable QA steps.</p></div>
+        <div class="tool-step practice"><b>Practice</b><p>Create a 30-day content board with 12 fictional posts and move each card through the full workflow.</p></div>
+        <label class="tool-check"><input type="checkbox" data-tool-check="trello"> Mark lab complete</label>
+        <a class="tool-link" href="https://trello.com/" target="_blank" rel="noopener">Open Trello ↗</a>
+      </div>
+
+      <div class="card tool-card" data-tool-level="professional">
+        <span class="badge blue">Professional Lab 07</span><h4>ClickUp • Team Operations System</h4>
+        <div class="tool-meta"><span class="study-pill">Operations</span><span class="study-pill">QA</span><span class="study-pill">Creative Ops</span></div>
+        <div class="tool-step learn"><b>Learn</b><p>Practice designing a workspace with lists, statuses, custom fields, views, Docs and repeatable task structures.</p></div>
+        <div class="tool-step scenario"><b>Scenario</b><p>A supervisor needs one place to see tasks by team, risk, client, deadline and status without maintaining several disconnected trackers.</p></div>
+        <div class="tool-step solution"><b>Sample Solution</b><p>Design a workspace hierarchy, define standard statuses and custom fields, create a leadership dashboard view, and document the operating rules in a short team guide.</p></div>
+        <div class="tool-step practice"><b>Practice</b><p>Build an operations workspace with HR, QA and Creative lists. Add custom fields for priority, owner, due date, risk and blocker.</p></div>
+        <label class="tool-check"><input type="checkbox" data-tool-check="clickup"> Mark lab complete</label>
+        <a class="tool-link" href="https://clickup.com/" target="_blank" rel="noopener">Open ClickUp ↗</a>
+      </div>
+
+      <div class="card tool-card" data-tool-level="professional">
+        <span class="badge butter">Professional Lab 08</span><h4>Asana • Deadline & Handoff Management</h4>
+        <div class="tool-meta"><span class="study-pill">VA</span><span class="study-pill">Operations</span><span class="study-pill">Creative Ops</span></div>
+        <div class="tool-step learn"><b>Learn</b><p>Practice structured projects, task ownership, dependencies, forms, timelines and handoff discipline.</p></div>
+        <div class="tool-step scenario"><b>Scenario</b><p>A creative campaign cannot start until copy is approved, but the designer has already been assigned work that depends on it.</p></div>
+        <div class="tool-step solution"><b>Sample Solution</b><p>Make the dependency explicit, assign owners, define the approval checkpoint and update the timeline based on the actual dependency rather than treating every task as independent.</p></div>
+        <div class="tool-step practice"><b>Practice</b><p>Build a campaign project with intake, production, QA, approval and publishing stages, including at least three dependencies.</p></div>
+        <label class="tool-check"><input type="checkbox" data-tool-check="asana"> Mark lab complete</label>
+        <a class="tool-link" href="https://asana.com/" target="_blank" rel="noopener">Open Asana ↗</a>
+      </div>
+
+      <div class="card tool-card" data-tool-level="professional">
+        <span class="badge sage">Professional Lab 09</span><h4>Airtable • Operations Database</h4>
+        <div class="tool-meta"><span class="study-pill">HRIS</span><span class="study-pill">QA</span><span class="study-pill">Content Ops</span></div>
+        <div class="tool-step learn"><b>Learn</b><p>Practice structured records, linked data, views, forms, interfaces and basic automation concepts for operational information.</p></div>
+        <div class="tool-step scenario"><b>Scenario</b><p>You need one system linking employees, training records, agreements, deadlines and owners without duplicating the same information in several tables.</p></div>
+        <div class="tool-step solution"><b>Sample Solution</b><p>Separate core entities into linked tables, use consistent field types, create filtered views for different teams and establish one source of truth for each fact.</p></div>
+        <div class="tool-step practice"><b>Practice</b><p>Build a fictional HR Operations base with Employees, Training, Documents and Tasks. Create views for Overdue and Expiring items.</p></div>
+        <label class="tool-check"><input type="checkbox" data-tool-check="airtable"> Mark lab complete</label>
+        <a class="tool-link" href="https://airtable.com/" target="_blank" rel="noopener">Open Airtable ↗</a>
+      </div>
+
+      <div class="card tool-card" data-tool-level="professional">
+        <span class="badge peach">Professional Lab 10</span><h4>Canva • Creative Operations Handoff</h4>
+        <div class="tool-meta"><span class="study-pill">Creative Ops</span><span class="study-pill">Social</span><span class="study-pill">Content QA</span></div>
+        <div class="tool-step learn"><b>Learn</b><p>Practice building clean creative requests, reviewing assets against a brief, checking brand consistency and organizing final deliverables.</p></div>
+        <div class="tool-step scenario"><b>Scenario</b><p>A designer submits a social graphic but the copy, dimensions and call-to-action do not match the brief.</p></div>
+        <div class="tool-step solution"><b>Sample Solution</b><p>Compare the asset to the approved brief, record exact gaps, return a consolidated revision request and update the production tracker. Avoid scattered feedback across multiple messages.</p></div>
+        <div class="tool-step practice"><b>Practice</b><p>Create a fictional campaign brief, one social asset, a QA checklist and a consolidated revision note.</p></div>
+        <label class="tool-check"><input type="checkbox" data-tool-check="canva"> Mark lab complete</label>
+        <a class="tool-link" href="https://www.canva.com/" target="_blank" rel="noopener">Open Canva ↗</a>
+      </div>
+
+      <div class="card tool-card" data-tool-level="automation">
+        <span class="badge blue">Automation Lab 11</span><h4>Zapier • Trigger → Action Workflow</h4>
+        <div class="tool-meta"><span class="study-pill">Automation</span><span class="study-pill">HR</span><span class="study-pill">VA</span><span class="study-pill">Operations</span></div>
+        <div class="tool-step learn"><b>Learn</b><p>Understand trigger → action logic, field mapping, filters/conditions, testing, logs and exception handling. Automate repetitive handoffs only after the manual process is clear.</p></div>
+        <div class="tool-step scenario"><b>Scenario</b><p>An HR request form is submitted and someone must manually copy the request into a task list, notify the owner and record the due date.</p></div>
+        <div class="tool-step solution"><b>Sample Solution</b><p>Use the form submission as the trigger, create the task, map employee/request/due-date fields, notify the owner and test edge cases. Keep a human review step for sensitive decisions.</p></div>
+        <div class="tool-step practice"><b>Practice</b><p>Build a fictional automation: Form submission → task creation → owner notification → review queue. Document the trigger, actions and failure plan.</p></div>
+        <label class="tool-check"><input type="checkbox" data-tool-check="zapier"> Mark lab complete</label>
+        <a class="tool-link" href="https://zapier.com/" target="_blank" rel="noopener">Open Zapier ↗</a>
+      </div>
+
+      <div class="card tool-card" data-tool-level="automation">
+        <span class="badge lavender" style="background:#eee7fb;color:#6b5a8d">Automation Lab 12</span><h4>Make • Multi-Step Operations Scenario</h4>
+        <div class="tool-meta"><span class="study-pill">Advanced Automation</span><span class="study-pill">Operations</span><span class="study-pill">HR</span></div>
+        <div class="tool-step learn"><b>Learn</b><p>Practice multi-step visual scenarios, branching logic, data mapping, testing and error handling. Start with a simple workflow before adding complexity.</p></div>
+        <div class="tool-step scenario"><b>Scenario</b><p>A new employee completes an onboarding form. You need to create an onboarding task set, log the start date, notify the owner and flag missing documents.</p></div>
+        <div class="tool-step solution"><b>Sample Solution</b><p>Trigger from the intake, map the employee data, create the required tasks, route the owner notification, add a document-status check and send incomplete records to a review path. Test both complete and incomplete submissions.</p></div>
+        <div class="tool-step practice"><b>Practice</b><p>Create a visual workflow map first, then recreate the logic in a practice Make scenario. Document every trigger, module, field and exception path.</p></div>
+        <label class="tool-check"><input type="checkbox" data-tool-check="make"> Mark lab complete</label>
+        <a class="tool-link" href="https://www.make.com/" target="_blank" rel="noopener">Open Make ↗</a>
+      </div>
+    </div>
+
+    <div class="card sim-card" style="margin-top:18px">
+      <span class="badge butter">🏆 Final Integrated Simulation</span>
+      <h4>Build Your Mini Operations Department</h4>
+      <p>Use the tools you learned together. The goal is to build a small but complete operating system that you can explain in an interview.</p>
+      <div class="workflow-map">
+        <span class="workflow-node">Google Form</span><span class="workflow-arrow">→</span><span class="workflow-node">Sheets / Airtable</span><span class="workflow-arrow">→</span><span class="workflow-node">ClickUp / Asana</span><span class="workflow-arrow">→</span><span class="workflow-node">Drive / Notion</span><span class="workflow-arrow">→</span><span class="workflow-node">Zapier / Make</span><span class="workflow-arrow">→</span><span class="workflow-node">Dashboard & Review</span>
+      </div>
+      <div class="grid grid-2" style="margin-top:10px">
+        <div class="card"><h4>Scenario</h4><p>Run one fictional week containing an employee request, a QA issue, a creative request, a social publishing deadline and a management review.</p></div>
+        <div class="card"><h4>Sample Solution</h4><p>Use one intake point, one source of truth for each record type, visible task ownership, documented handoffs, deadline controls, QA evidence and an automation only where the process is stable and safe.</p></div>
+        <div class="card"><h4>Practice Deliverables</h4><p>1 dashboard, 1 SOP, 1 tracker/database, 1 task board, 1 automation map, 1 weekly report and 1 five-minute explanation of how the system works.</p></div>
+        <div class="card"><h4>Interview Question</h4><p>“Tell me about a workflow you improved.” Explain the problem, evidence, process change, tool choice, control point, measurable result and what you would improve next.</p></div>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:16px"><b>Tool rule:</b> The goal is not to collect software badges. Learn the workflow first, then use the simplest tool that preserves accuracy, ownership, deadlines, visibility and auditability. Always use fictional/sanitized data for practice.</div>
+
+    <div class="card" style="margin-top:16px">
+      <h4>Official Tool Directory</h4>
+      <div class="table-wrap"><table class="matrix"><thead><tr><th>Tool</th><th>Best practice in this academy</th><th>Primary role tracks</th><th>Level</th></tr></thead><tbody>
+        <tr><td><b>Google Workspace</b></td><td>Records, forms, files, schedules</td><td>HR, QA, VA, Operations</td><td>Foundation</td></tr>
+        <tr><td><b>Notion</b></td><td>Knowledge base + connected operations hub</td><td>HR Ops, VA, SOP</td><td>Productivity</td></tr>
+        <tr><td><b>Trello</b></td><td>Simple visual production workflow</td><td>Creative Ops, Social, VA</td><td>Productivity</td></tr>
+        <tr><td><b>ClickUp</b></td><td>Detailed team workflow + task operations</td><td>QA, Operations, Creative Ops</td><td>Professional</td></tr>
+        <tr><td><b>Asana</b></td><td>Projects, deadlines and dependencies</td><td>VA, Operations, Creative Ops</td><td>Professional</td></tr>
+        <tr><td><b>Airtable</b></td><td>Structured operational database</td><td>HRIS, QA, Content Ops</td><td>Professional</td></tr>
+        <tr><td><b>Canva</b></td><td>Creative handoff + content QA</td><td>Creative Ops, Social</td><td>Professional</td></tr>
+        <tr><td><b>Zapier</b></td><td>Simple trigger/action automation</td><td>VA, HR Ops, Operations</td><td>Automation</td></tr>
+        <tr><td><b>Make</b></td><td>Multi-step visual automation</td><td>Operations, HR, Automation</td><td>Advanced Automation</td></tr>
+      </tbody></table></div>
+    </div>
+  </section>
+
+  <section id="quizzes" class="section">
+    <div class="section-head"><div><h3>Knowledge Checks</h3><p>Answer the questions and get instant feedback.</p></div></div>
+    <div id="quizArea"></div>
+  </section>
+
+  <section id="portfolio-lab" class="section">
+    <div class="section-head"><div><h3>Portfolio Lab</h3><p>Turn study outputs into evidence you can discuss during applications.</p></div></div>
+    <div class="grid grid-3">
+      <div class="card"><h4>Evidence Set A • HR</h4><p>Employment track record + training agreement tracker + clearance checklist + SOP/policy sample.</p><p><b>Interview story:</b> how you protected accuracy, deadlines and documentation quality.</p></div>
+      <div class="card"><h4>Evidence Set B • QA</h4><p>QA scorecard + audit checklist + dashboard + coaching note + RCA.</p><p><b>Interview story:</b> how you turned standards into measurable quality.</p></div>
+      <div class="card"><h4>Evidence Set C • VA</h4><p>Command center + research brief + meeting workflow + deadline tracker.</p><p><b>Interview story:</b> how you reduced follow-up and kept work moving.</p></div>
+      <div class="card"><h4>Evidence Set D • Creative Ops</h4><p>Creative brief + content pipeline + version-control system + content QA checklist.</p><p><b>Interview story:</b> how you made production predictable.</p></div>
+      <div class="card"><h4>Evidence Set E • Social</h4><p>30-day calendar + community triage matrix + weekly analytics report.</p><p><b>Interview story:</b> how you connect publishing with measurement.</p></div>
+      <div class="card"><h4>Evidence Set F • Subscription Ops</h4><p>Account health audit + engagement QA + escalation matrix + process-improvement note.</p><p><b>Interview story:</b> how you monitor consistency and subscriber experience.</p></div>
+      <div class="card"><h4>Evidence Set G • HR Specialist</h4><p>Fictional employee case file + compliance matrix + performance cycle + HRIS audit.</p><p><b>Interview story:</b> how you protect evidence, consistency, deadlines and process integrity.</p></div>
+      <div class="card"><h4>Evidence Set H • People Operations</h4><p>HR service desk + lifecycle dashboard + SLA tracker + improvement proposal.</p><p><b>Interview story:</b> how you turn HR administration into a measurable service system.</p></div>
+      <div class="card"><h4>Evidence Set I • Operations Manager</h4><p>Weekly operating review + capacity plan + KPI dashboard + RCA + 30–60–90 plan.</p><p><b>Interview story:</b> how you manage priorities, risks, quality and continuous improvement.</p></div>
+    </div>
+    <div class="note" style="margin-top:16px">Use fictionalized or sanitized examples. Never place confidential employer, employee, client, or subscriber information in a public portfolio.</div>
+  </section>
+
+  <section id="glossary" class="section">
+    <div class="section-head"><div><h3>Glossary</h3><p>Plain-language definitions for the terms used in the academy.</p></div></div>
+    <div class="searchbar"><input id="glossarySearch" placeholder="Search a term, e.g. calibration, SOP, KPI..." /></div>
+    <div id="glossaryList" class="grid grid-2"></div>
+  </section>
+
+  <div class="footer">Operations Roles Mastery Academy • Designed as a companion study hub to your professional portfolio • Progress is stored locally in this browser.</div>
+</main>
+</div>
+<script>
+const curriculum = [
+['Week 1','Foundations of Professional Operations','sage',['What an operations professional actually owns','Documentation as evidence: accuracy, traceability and version control','Professional communication: concise updates and escalation','Task ownership, priorities, dependencies and deadlines','Build your personal operations command center']],
+['Week 2','Quality Mindset & Standards','blue',['Quality vs. speed: balancing both with defined standards','Rubrics, checklists and acceptance criteria','Sampling, review notes and evidence-based observations','Error severity, recurrence and customer impact','Mini lab: build a quality checklist']],
+['Week 3','Workflow & Process Mapping','peach',['Inputs, outputs, owners, handoffs and control points','Swimlane-style process mapping','Bottlenecks, blockers and failure points','RACI basics for operational ownership','Mini lab: map an end-to-end employee or content process']],
+['Week 4','Metrics, KPIs & Reporting','butter',['What makes a KPI useful','Leading vs. lagging indicators','Pass rate, cycle time, on-time rate, revision rate and backlog','How to explain a trend without overclaiming','Build a one-page weekly operations report']],
+['Week 5','HR Employee Lifecycle','sage',['Employee lifecycle from hiring to separation','Employee master data and record structures','Employment status tracking and change logs','Confidentiality and document access principles','Lab: create a mock employee tracker']],
+['Week 6','HR Documentation & Employee Relations','blue',['Contracts, amendments and documentation hygiene','Notice to Explain: factual structure and evidence organization','Employee evaluations, KPIs and review cycles','Clearances and exit dependencies','Lab: build a clearance tracker']],
+['Week 7','Leave, Training & Time-Bound HR Work','peach',['SIL / leave record workflow','Training agreement structures','Expiry and renewal monitoring','Deadline trackers and reminder systems','Lab: build a training + deadline dashboard']],
+['Week 8','HR Policy, SOP & Internal Rules','butter',['SOP anatomy and writing style','Internal policy / bylaw structure','Process controls and approval points','Policy review and revision history','Lab: rewrite a messy process into an SOP']],
+['Week 9','QA Operations','sage',['QA scorecards and weighted criteria','Account audit checklists','Evidence standards and note-taking','Calibration and reviewer consistency','Lab: score a fictional batch of interactions']],
+['Week 10','Coaching, Escalation & RCA','blue',['Writing actionable coaching notes','The difference between correction and coaching','Escalation matrices and severity levels','5 Whys and root-cause analysis','Lab: create a recurring-error RCA']],
+['Week 11','QA Dashboards & Improvement','peach',['Trend tracking and recurring error categories','QA dashboards: what to show and why','Action plans, owners and follow-up dates','Closed-loop quality management','Lab: build a mini QA dashboard']],
+['Week 12','Account Operations Supervision','butter',['Activity review and account health','Standard consistency across accounts','Daily / weekly operating rhythm','Risk and issue tracking','Lab: account operations review'],],
+['Week 13','Senior VA Essentials','sage',['Calendar and inbox operations','Research and information synthesis','Task boards and executive follow-up','Meeting preparation and action tracking','Lab: build a Senior VA command center']],
+['Week 14','Senior VA Advanced Operations','blue',['Stakeholder communication and status reporting','Proactive risk identification','Recurring work and deadline systems','Digital file and knowledge-base organization','Lab: create a weekly operations brief']],
+['Week 15','Creative Operations','peach',['Creative briefs and intake forms','Content production pipeline','Approval stages and revision loops','Version control and asset naming','Lab: build a creative operations tracker']],
+['Week 16','Content QA & Publishing Readiness','butter',['Copy, design and link QA','Brand consistency checks','Publishing checklists and final approval','Content archive and post-publish records','Lab: run a full content QA review']],
+['Week 17','Social Media Management','sage',['Content pillars and platform roles','30-day content calendar design','Community triage and response systems','Social analytics and reporting','Lab: build a fictional 30-day content plan']],
+['Week 18','Subscription Account Operations','blue',['Account activity and consistency','Subscriber/fan experience standards','Engagement and response workflows','Escalation and sensitive-case handling','Lab: create an account health review']],
+['Week 19','Integrated Operations Systems','peach',['Connecting HR, QA, VA and Creative Ops systems','Automation-ready thinking without losing control','Dashboards, trackers, SOPs and handoffs','Building a repeatable operating cadence','Lab: design an integrated operations system']],
+['Week 20','Capstone & Career Readiness','butter',['Choose a target role and define success measures','Build a 30–60–90 day plan','Assemble a role-specific evidence set','Practice scenario answers and structured storytelling','Final capstone: present your operations system']],
+['Week 21','HR Generalist & People Service','sage',['Recruitment-to-onboarding handoffs','HR case intake and service delivery','Employee lifecycle coordination across functions','Manager support and HR communication','Lab: build an HR Generalist weekly command board']],
+['Week 22','Employee Relations, Labor Relations & Compliance','blue',['Case chronology and evidence indexing','Fact-finding, NTE and documentation discipline','Applicable labor-law research and policy mapping','Compliance matrices, review calendars and escalation','Lab: build a fictional employee case + compliance control file']],
+['Week 23','Performance, Talent & Learning Systems','peach',['Performance-cycle design, KPIs and review calendars','Calibration, coaching and performance improvement plans','Recruitment pipeline design and candidate handoffs','Training needs analysis and learning records','Lab: build an integrated talent-to-performance system']],
+['Week 24','HRIS, People Data & Rewards Operations','butter',['HRIS data structures, permissions and data hygiene','People dashboards and operational HR reporting','Benefits and leave administration concepts','Reconciliation, exceptions and audit trails','Lab: perform a fictional people-data quality audit']],
+['Week 25','HRBP Foundation, People Ops & Operations Management','sage',['Workforce planning and people metrics for managers','People Operations service design and SLAs','Capacity planning, risk management and operational reviews','Continuous improvement across HR, QA, VA and Creative Ops','Final advanced capstone: run a weekly operations leadership review']],
+];
+
+const gloss = [
+['QA','Quality Assurance: a system for checking whether work meets defined standards.'],['KPI','Key Performance Indicator: a measure used to track a meaningful aspect of performance.'],['SOP','Standard Operating Procedure: a documented method for completing a recurring process.'],['RCA','Root-Cause Analysis: a structured method for finding why a problem recurs.'],['Calibration','A process for aligning reviewers so they interpret a standard consistently.'],['Escalation','Moving an issue to someone with the authority or expertise required to act.'],['Control Point','A step in a process where quality, authorization or compliance is checked.'],['Audit Trail','A traceable record showing what happened, when, by whom and with what evidence.'],['Cycle Time','The time required to move a task from start to completion.'],['On-Time Rate','The percentage of work completed by the required deadline.'],['Backlog','Work that remains open or unfinished.'],['RACI','Responsible, Accountable, Consulted, Informed: a framework for role clarity.'],['Version Control','A system for identifying and managing multiple versions of a document or asset.'],['Content Brief','A document defining objective, audience, message, format, references and requirements for an asset.'],['Stakeholder','A person or group affected by the work or able to influence it.'],['Employee Lifecycle','The series of stages an employee moves through from hiring to separation.'],['Employment Track Record','A chronological record of employment status, events and supporting documents.'],['Clearance','A controlled confirmation that required exit obligations or returns have been completed.'],['Training Agreement','A document or record defining training participation, obligations and related terms.'],['SIL','Service Incentive Leave; track according to the applicable law and the organization’s approved policy.'],['Subscriber Experience','The overall experience a subscriber has across communication, content and support.'],['Creative Operations','The systems and coordination that keep creative work moving predictably from brief to publish.'],['Content QA','A review that checks an asset against copy, brand, technical, link and approval requirements.'],['Creative Workflow','The sequence of steps and owners used to turn an idea into a finished content asset.'],['Deadline Control','A system for monitoring due dates, owners, blockers and escalation points.'],
+['HR Generalist','An HR role that supports multiple areas of the employee lifecycle rather than one narrow specialty.'],
+['Employee Relations','The function focused on workplace cases, communication, employee concerns, investigations and related documentation.'],
+['Compliance Matrix','A table linking requirements to evidence, owners, frequency, deadlines and review status.'],
+['People Operations','An operating approach that combines employee lifecycle support, service delivery, systems and process improvement.'],
+['HRIS','Human Resources Information System: software used to store, manage and report employee information.'],
+['Data Hygiene','The practice of keeping data complete, accurate, current, consistently formatted and appropriately controlled.'],
+['PIP','Performance Improvement Plan: a structured plan defining performance gaps, expectations, support and review points.'],
+['Calibration Session','A review session used to align evaluators on how a performance or QA standard should be applied.'],
+['Training Needs Analysis','A structured assessment of the gap between required capability and current capability.'],
+['Talent Acquisition','The process of planning for, sourcing, assessing and hiring candidates.'],
+['Candidate Experience','The candidate’s experience across communication, scheduling, interviews and hiring stages.'],
+['Benefits Administration','The operational process of maintaining employee benefit eligibility, records and related changes.'],
+['SLA','Service Level Agreement: a defined service expectation such as response or resolution time.'],
+['People Analytics','Using structured workforce data to describe trends, patterns and operational questions.'],
+['Workforce Planning','Estimating future people needs, capacity, skills and timing against business requirements.'],
+['HRBP','Human Resources Business Partner: an HR role that connects people practices with business and workforce needs.'],
+['Capacity Planning','Matching available time, people and resources with expected workload.'],
+['Internal Bylaw','An internal organizational rule or governance document that should have a clear authority, scope, rules, owners and review process.'],
+['Policy Basis','The documented authority or rationale supporting an organizational policy, such as applicable law, regulation, contract or approved company standard.']
+];
+
+
+const studyGuides = {
+  'HR Operations': {
+    subtitle:'Employee records, lifecycle control and HR documentation',
+    focus:['Employment track records','Contracts and status changes','NTEs and evaluations','Clearances and SIL tracking','Training agreements and deadlines'],
+    learn:[
+      'Build a single employee record trail: identity → employment status → documents → changes → actions → closure.',
+      'Use evidence-based HR documentation. Separate facts, dates, source documents, employee statements and management actions.',
+      'Create deadline controls for contracts, evaluations, training agreements, clearances, leave records and employee-status changes.'
+    ],
+    scenario:'A probationary employee has an upcoming evaluation, a missing training agreement, and an unresolved clearance item from an earlier transfer. Your manager asks for the status by 3 PM.',
+    solution:'Create one employee status view. Record each item with owner, due date, evidence, current status and next action. Verify the source document before changing the tracker, then send the manager a concise update: completed items, open gaps, risk/dependency, and next deadline.',
+    practice:'Build a fictional Employment Track Record + Deadline Tracker for one employee. Include at least 8 dated events and 3 pending actions.'
+  },
+  'QA / Account Operations Supervisor': {
+    subtitle:'Quality review, standards, coaching and account activity control',
+    focus:['QA scorecards','Account audits','Calibration','Coaching and escalation','Trend tracking and RCA'],
+    learn:[
+      'A strong QA system defines the standard before the review, samples evidence consistently, scores against criteria and records proof.',
+      'Separate an observation from an interpretation: write what happened, cite evidence, identify the standard, then explain impact.',
+      'Use recurring-error trends to decide whether the issue needs coaching, workflow correction, training, or escalation.'
+    ],
+    scenario:'Three reviewers audit similar subscriber interactions. Their scores are 62%, 84%, and 91% for work that appears broadly similar.',
+    solution:'Run a calibration session. Select the same sample, apply the rubric criterion-by-criterion, compare evidence, resolve ambiguous standards, document the agreed interpretation, and update the QA guide if a rule is unclear.',
+    practice:'Create a 5-criterion QA scorecard with weights, pass threshold, evidence field, severity levels and a coaching follow-up.'
+  },
+  'Senior VA': {
+    subtitle:'Proactive executive support, research, coordination and follow-through',
+    focus:['Calendar and inbox','Research','Task ownership','Meeting operations','Proactive risk management'],
+    learn:[
+      'Senior-level VA work is about ownership: know the desired outcome, next action, dependency, deadline and who needs an update.',
+      'For research, define the question, gather credible evidence, summarize the decision-relevant facts, and identify assumptions or gaps.',
+      'Use recurring systems so important work does not depend on memory: task board, follow-up list, calendar, notes and status report.'
+    ],
+    scenario:'Your client has four meetings tomorrow, one incomplete proposal, two unanswered emails and a deadline that depends on a document from another person.',
+    solution:'Build a priority stack by deadline and dependency. Protect meeting preparation time, draft or queue the proposal follow-up, triage emails into urgent/action/reference, and contact the dependency owner with a clear request and deadline. Send one end-of-day status summary.',
+    practice:'Create a one-page Senior VA command center with priorities, calendar checkpoints, follow-ups, blockers and next actions.'
+  },
+  'Creative Operations Specialist': {
+    subtitle:'Creative workflow, asset coordination, QA and approvals',
+    focus:['Creative briefs','Content pipelines','Version control','Approval workflows','Production reporting'],
+    learn:[
+      'Creative operations creates predictability: every asset needs a clear brief, owner, stage, reviewer, deadline and final storage location.',
+      'Version control should make the current file obvious. Use consistent naming, version numbers and archive rules.',
+      'Creative QA checks both content and production requirements: copy, dimensions, links, brand rules, required elements and approval status.'
+    ],
+    scenario:'A social campaign has 12 assets due tomorrow. Four are waiting for copy edits, three have conflicting file versions, and two have no recorded approver.',
+    solution:'Convert the work into a pipeline. Freeze a single working version for each asset, assign missing approvers, group copy edits into one review batch, flag the two high-risk assets, and publish a status report showing what is ready, blocked and at risk.',
+    practice:'Build a creative pipeline with stages from Brief → Production → QA → Review → Revision → Approval → Publish → Archive.'
+  },
+  'Social Media Manager': {
+    subtitle:'Content strategy, publishing systems, community and analytics',
+    focus:['Content pillars','Content calendars','Community triage','Publishing QA','Analytics and reporting'],
+    learn:[
+      'Start with purpose: define audience, content pillar, platform role, format, CTA and success measure before scheduling.',
+      'Use a calendar that tracks not only dates, but asset status, caption status, approval and publishing owner.',
+      'Report performance by connecting metrics to content and context. Avoid treating one metric as proof of causation.'
+    ],
+    scenario:'A month of posts generated strong views but weak saves and link clicks. The team wants to post more of the same because views are high.',
+    solution:'Segment the results by content theme and format. Identify which posts attracted attention versus action, review CTA and audience intent, and propose controlled tests for content that should drive saves or clicks. Keep high-reach formats where appropriate, but do not assume reach alone equals business impact.',
+    practice:'Create a 30-day social calendar with 3 content pillars, 2 measurement goals and a weekly reporting block.'
+  },
+  'Subscription Account Operations': {
+    subtitle:'Account activity, subscriber experience, content consistency and risk control',
+    focus:['Account health','Subscriber/fan communication','Engagement workflows','Schedule consistency','Escalation and risk'],
+    learn:[
+      'Account operations combines consistency and customer experience: profile quality, activity, messaging, content readiness, records and escalation controls.',
+      'Build response systems around tone, boundaries, personalization and clear escalation rules rather than improvising every interaction.',
+      'Monitor patterns such as missed activity, repeated complaints, response delays and content gaps so problems are addressed before they compound.'
+    ],
+    scenario:'A subscription account has inconsistent posting, delayed replies and an increase in complaints about missed expectations.',
+    solution:'Run an account health review. Compare planned versus actual activity, review response-time samples, categorize complaints, identify the most repeated friction point, and create a short corrective plan with owner, deadline and follow-up check.',
+    practice:'Create an Account Health Review containing activity consistency, response quality, subscriber experience, risks and next actions.'
+  },
+  'SOP / Policy Specialist': {
+    subtitle:'Process documentation, controls, internal rules and revision management',
+    focus:['SOP anatomy','Process mapping','Control points','Policy basis','Revision history'],
+    learn:[
+      'A usable SOP explains purpose, scope, owner, inputs, exact steps, control points, exceptions, records and escalation.',
+      'An internal policy or bylaw should clearly state its authority or basis, purpose, coverage, rules, responsibilities, exceptions, enforcement approach and review date.',
+      'Translate vague expectations into observable requirements with owners, timing and evidence. Confirm the legal basis and internal approval before actual release.'
+    ],
+    scenario:'A department says, “Everyone should submit reports on time,” but late submissions continue and no one knows who checks or escalates them.',
+    solution:'Map the process. Define the exact report, deadline, owner, reviewer, required evidence, reminder point, escalation threshold and completion record. Write the SOP so another person can execute it without asking what “on time” means.',
+    practice:'Rewrite a fictional messy process into a one-page SOP with controls, exceptions and revision history.'
+  },
+  'HR Generalist': {
+    subtitle:'Broad employee lifecycle support across HR functions',
+    focus:['Recruitment-to-onboarding','Employee service','Records','Employee relations','Manager support'],
+    learn:[
+      'A Generalist connects multiple HR processes and understands where one action affects another, such as hiring, records, status, performance and separation.',
+      'Good HR service uses a case-intake mindset: request, context, priority, documents, owner, SLA/deadline, status and closure.',
+      'Learn to coordinate with managers while keeping documentation, confidentiality and process consistency intact.'
+    ],
+    scenario:'A manager asks HR to process an employee status change today, but the supporting document has not been submitted.',
+    solution:'Acknowledge the request, identify the missing document, explain the processing requirement, record the request and deadline, and follow up with the requestor. Do not update official records until the required evidence and approval are present.',
+    practice:'Build an HR Generalist weekly command board covering open requests, employee lifecycle tasks, deadlines and follow-ups.'
+  },
+  'Employee Relations Specialist': {
+    subtitle:'Employee cases, fact-finding, documentation and structured communication',
+    focus:['Case intake','Chronology','Evidence','NTE process','Resolution documentation'],
+    learn:[
+      'Start a case with a chronology: what happened, when, where, who was involved, and what evidence exists.',
+      'Keep allegations, verified facts, employee explanations and management decisions distinct in documentation.',
+      'Use a defined process and current approved policy/legal guidance rather than deciding outcomes from emotion or assumptions.'
+    ],
+    scenario:'An employee is reported for repeated attendance issues. The manager provides a narrative but no attendance records.',
+    solution:'Create a case file and request the relevant attendance records, schedules, approved leave documents and prior notices. Compare evidence to the applicable standard before drafting or recommending the next procedural step.',
+    practice:'Build a fictional employee case chronology with source documents, open questions, actions, owner and review dates.'
+  },
+  'Labor Relations / HR Compliance Specialist': {
+    subtitle:'Compliance controls, labor-law research and policy mapping',
+    focus:['Requirement mapping','Labor-law research','Compliance matrices','Control evidence','Review calendars'],
+    learn:[
+      'A compliance workflow links a requirement to its source, applicable population, evidence, owner, frequency, deadline and verification method.',
+      'Separate legal requirements from company choices. Record the authority supporting each internal rule and flag items needing professional/legal review.',
+      'Use calendars and audits to make compliance recurring rather than reactive.'
+    ],
+    scenario:'A company handbook contains a rule that appears inconsistent with a newer legal requirement.',
+    solution:'Flag the provision, identify the current authoritative source, compare the old rule with the current requirement, document the gap, and route the proposed revision through the organization’s approval/legal review process. Do not simply overwrite the rule without authority and approval.',
+    practice:'Create a fictional HR Compliance Matrix with 10 requirements, sources, owners, evidence, frequency, status and review dates.'
+  },
+  'Performance Management Specialist': {
+    subtitle:'KPIs, evaluations, calibration, coaching and improvement plans',
+    focus:['KPI design','Review cycles','Calibration','Coaching','PIP fundamentals'],
+    learn:[
+      'Useful KPIs measure outcomes or meaningful behaviors, have a defined period, source and expected range, and connect to the role.',
+      'Calibration improves consistency by having reviewers apply the same rubric and evidence standards to similar cases.',
+      'A performance-improvement plan should describe the gap, evidence, expected standard, support, review points and outcome criteria.'
+    ],
+    scenario:'Two employees receive very different evaluation scores for similar work because their supervisors emphasize different standards.',
+    solution:'Review the evaluation criteria, run a calibration discussion using shared examples, clarify the rubric, document the agreed standard, and re-check affected evaluations where appropriate.',
+    practice:'Design a performance cycle calendar with KPI setting, monthly check-ins, mid-cycle review, calibration and final review.'
+  },
+  'HRIS & People Data Specialist': {
+    subtitle:'People data accuracy, reporting, systems and audit controls',
+    focus:['Data hygiene','Source documents','Access controls','HR reporting','Data audits'],
+    learn:[
+      'HR data quality means accurate, current, complete, consistent and appropriately controlled records.',
+      'Every critical data change should have a reliable source or approval trail so the record can be traced later.',
+      'Dashboards are only as reliable as the underlying definitions and data discipline. Define fields, owners and update frequency.'
+    ],
+    scenario:'A headcount dashboard says 148 employees, while the HR tracker says 153. Five records have recently changed status.',
+    solution:'Reconcile the source data. Compare the five changed records, identify the reporting cutoff date and status definitions, correct discrepancies, document the reconciliation, and update the dashboard with the verified source.',
+    practice:'Perform a fictional HRIS Data Audit with 20 records and calculate an accuracy rate plus recurring error categories.'
+  },
+  'Talent Acquisition Specialist': {
+    subtitle:'Hiring funnel, candidate coordination and onboarding handoff',
+    focus:['Job analysis','Sourcing','Screening','Interview coordination','Candidate experience'],
+    learn:[
+      'Begin with a clear job requirement: responsibilities, must-have skills, evidence, work arrangement, schedule and hiring stages.',
+      'Candidate tracking should show stage, next action, owner, interview schedule, disposition reason and communication status.',
+      'A strong candidate experience depends on timely communication, organized scheduling and clear expectations.'
+    ],
+    scenario:'A candidate has completed the interview but has received no update for eight days. The hiring manager is waiting for another interviewer’s notes.',
+    solution:'Check the candidate tracker, obtain the missing feedback, update the stage, and send a timely status message to the candidate. Record the communication and set the next internal deadline so the same delay does not repeat.',
+    practice:'Build a 10-candidate recruitment pipeline with stage definitions, owners, SLA targets and candidate communication checkpoints.'
+  },
+  'Learning & Development Specialist': {
+    subtitle:'Training needs, agreements, learning records and follow-up',
+    focus:['Training needs analysis','Training plans','Training agreements','Attendance','Evaluation'],
+    learn:[
+      'Training starts with a gap: required capability versus current capability, supported by evidence.',
+      'Training records should connect employee, course, agreement, dates, completion evidence and follow-up.',
+      'Measure whether the learning was completed and whether the intended capability changed; attendance alone is not the full story.'
+    ],
+    scenario:'A department completes a new software training, but employees continue making the same system errors two weeks later.',
+    solution:'Run a short post-training review. Determine whether the gap is knowledge, practice, process, access or unclear instructions. Use the evidence to adjust coaching, job aids or the process rather than assuming another generic training is the answer.',
+    practice:'Create a Training Needs Analysis and Training Agreement Tracker for a fictional team.'
+  },
+  'Compensation & Benefits Specialist': {
+    subtitle:'Benefits, leave administration, eligibility and payroll-support accuracy',
+    focus:['Benefits records','Eligibility','Leave concepts','Payroll inputs','Reconciliation'],
+    learn:[
+      'Compensation and benefits operations depends on accurate eligibility, effective dates, approved changes and documented payroll inputs.',
+      'Leave administration should use clear request, approval, recording and reconciliation controls consistent with current law and company policy.',
+      'Reconciliation means comparing expected versus recorded values and investigating exceptions before closing the cycle.'
+    ],
+    scenario:'An employee’s leave balance differs between the HR tracker and the payroll input file.',
+    solution:'Compare both records to the approved leave transactions, identify the cutoff date, correct the source record or payroll input through the approved process, document the reconciliation and confirm the updated balance.',
+    practice:'Build a fictional leave and benefits reconciliation sheet with 10 employees and 5 exceptions.'
+  },
+  'People Operations Specialist': {
+    subtitle:'Employee experience, HR service delivery and process improvement',
+    focus:['HR service desk','Employee lifecycle','SLAs','Service metrics','Continuous improvement'],
+    learn:[
+      'People Operations treats HR as a service system: requests enter, work is routed, SLAs are tracked, outcomes are documented and feedback informs improvement.',
+      'Common service measures include response time, resolution time, backlog, repeat requests and satisfaction indicators.',
+      'Improve the process by finding recurring friction, simplifying steps and clarifying ownership rather than simply working faster.'
+    ],
+    scenario:'HR receives the same five types of employee questions every week by chat, email and in person, creating duplicate work.',
+    solution:'Create an intake structure and FAQ/knowledge base, define ownership and response targets, and track the top request categories. Use the data to decide which requests should be standardized or automated.',
+    practice:'Design an HR service desk with intake categories, SLA matrix, owner field, status flow and weekly service dashboard.'
+  },
+  'HR Business Partner — Foundation': {
+    subtitle:'Connecting workforce needs, managers, people metrics and business priorities',
+    focus:['Workforce planning','People metrics','Manager support','Business context','Organization development basics'],
+    learn:[
+      'HRBP work begins with the business question: what outcome does the manager or organization need, and what people factor affects it?',
+      'Use people data to describe patterns and risks, then connect them to operational realities such as capacity, turnover, hiring needs or capability gaps.',
+      'Advisory work requires curiosity, clear questions, evidence, options and documented follow-through.'
+    ],
+    scenario:'A manager says productivity is falling because “the team is disengaged,” but provides no data.',
+    solution:'Clarify the actual business problem, review productivity measures, staffing/capacity, attendance, workload, quality and recent process changes. Use the evidence to identify plausible factors and propose targeted actions rather than adopting the initial explanation as fact.',
+    practice:'Create a monthly people dashboard with 6 metrics and a one-page manager discussion brief explaining what changed and what needs attention.'
+  },
+  'Operations Manager': {
+    subtitle:'Capacity, KPIs, risk, priorities and cross-functional execution',
+    focus:['Capacity planning','Operational KPIs','Risk management','Review cadence','Process improvement'],
+    learn:[
+      'Operations management turns multiple workflows into one operating system with priorities, owners, measures, controls and review cadence.',
+      'Capacity planning compares available time/resources to expected workload and surfaces tradeoffs before deadlines are missed.',
+      'A good operating review separates facts, exceptions, decisions required and actions with owners and dates.'
+    ],
+    scenario:'A team has a backlog, three employees on leave, a rising QA error rate and a fixed client deadline.',
+    solution:'Quantify the workload and available capacity, identify critical work, protect quality controls, re-sequence lower-priority tasks, assign owners, communicate tradeoffs, and set a daily review point until the risk clears.',
+    practice:'Run a fictional weekly operations review with backlog, capacity, QA, risks, decisions and a 7-day action plan.'
+  },
+  'Operations Lead': {
+    subtitle:'Day-to-day operational leadership, prioritization and system stability',
+    focus:['Prioritization','Team coordination','KPI follow-up','Risk tracking','Process improvement'],
+    learn:[
+      'An Operations Lead keeps execution stable day to day while surfacing issues that require manager decisions.',
+      'Prioritize by customer/business impact, deadline, dependency, risk and effort—not simply by who asks first.',
+      'Use short operating huddles and clear action logs to keep work aligned without creating unnecessary meetings.'
+    ],
+    scenario:'Two urgent requests arrive while the team is already committed to three deadline-sensitive tasks.',
+    solution:'Check impact and deadlines, identify dependencies, confirm which work can safely move, assign owners, communicate tradeoffs and record the decision. Escalate only where authority or capacity is genuinely insufficient.',
+    practice:'Create a daily operations board with priority, owner, due date, blocker, escalation point and completion evidence.'
+  }
+};
+
+function markStudyComplete(role){
+  localStorage.setItem('oa-study-'+role, '1');
+  renderStudyGuide();
+}
+function renderStudyGuide(){
+  const roleList=document.getElementById('studyRoleList');
+  const content=document.getElementById('studyGuideContent');
+  const select=document.getElementById('studyRoleSelect');
+  const search=(document.getElementById('studySearch')?.value||'').toLowerCase().trim();
+  const roles=Object.keys(studyGuides).filter(r=>{
+    const d=studyGuides[r];
+    return !search || (r+' '+d.subtitle+' '+d.focus.join(' ')).toLowerCase().includes(search);
+  });
+  if(!window.currentStudyRole || !studyGuides[window.currentStudyRole] || (search && !roles.includes(window.currentStudyRole))){
+    window.currentStudyRole=roles[0] || Object.keys(studyGuides)[0];
+  }
+  const data=studyGuides[window.currentStudyRole];
+  roleList.innerHTML='';
+  roles.forEach(r=>{
+    const b=document.createElement('button'); b.className='study-role-btn'+(r===window.currentStudyRole?' active':'');
+    const done=localStorage.getItem('oa-study-'+r)==='1';
+    b.innerHTML=`${done?'✓ ':''}${r}<small>${studyGuides[r].subtitle}</small>`;
+    b.addEventListener('click',()=>{window.currentStudyRole=r;select.value=r;renderStudyGuide();});
+    roleList.appendChild(b);
+  });
+  select.innerHTML='<option value="">Choose a role</option>';
+  Object.keys(studyGuides).forEach(r=>{const o=document.createElement('option');o.value=r;o.textContent=r;select.appendChild(o);});
+  select.value=window.currentStudyRole;
+  const done=localStorage.getItem('oa-study-'+window.currentStudyRole)==='1';
+  content.innerHTML=`
+    <div class="study-hero">
+      <div class="eyebrow">Study Guide</div>
+      <h4>${window.currentStudyRole}</h4>
+      <p>${data.subtitle}</p>
+      <div style="margin-top:12px">${data.focus.map(x=>`<span class="study-pill">${x}</span>`).join('')}</div>
+      <div class="study-progress"><div class="study-progress-row"><span>Role guide status</span><span>${done?'Completed':'Not completed yet'}</span></div><div class="progressbar"><span style="width:${done?100:0}%"></span></div></div>
+    </div>
+    <div class="grid grid-2">
+      <div class="card study-card"><div class="label">Learn</div><h5>What to understand</h5><ul>${data.learn.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div class="card study-card"><div class="label">Scenario</div><h5>Put yourself in the role</h5><div class="scenario">${data.scenario}</div><p class="small" style="margin-top:10px">Before reading the solution, write your own: What would you do first? What evidence would you need? What would you document? Who needs an update?</p></div>
+      <div class="card study-card"><div class="label">Sample Solution</div><h5>Model approach</h5><div class="solution">${data.solution}</div></div>
+      <div class="card study-card"><div class="label">Practice</div><h5>Create evidence</h5><div class="practice">${data.practice}</div><p class="small" style="margin-top:10px">Save the output as a sanitized/f fictional training artifact you could discuss in an interview.</p></div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h4>Study Method</h4>
+      <div class="grid grid-4">
+        <div><b>10 min</b><p class="small">Read the Learn section and write 3 takeaways.</p></div>
+        <div><b>15 min</b><p class="small">Answer the scenario without looking at the solution.</p></div>
+        <div><b>15–30 min</b><p class="small">Compare the sample solution and note what you missed.</p></div>
+        <div><b>30–60 min</b><p class="small">Complete the Practice artifact and save it.</p></div>
+      </div>
+      <div class="study-actions"><button class="primary" onclick="markStudyComplete(${JSON.stringify(window.currentStudyRole)})">${done?'✓ Completed — Mark Again':'Mark This Role Guide Complete'}</button><button onclick="scrollToSection('templates')">Open Templates</button><button onclick="scrollToSection('portfolio-lab')">Turn It Into Portfolio Evidence</button></div>
+    </div>`;
+}
+
+function renderRoadmap(){
+  const host=document.getElementById('roadmapList'); host.innerHTML='';
+  curriculum.forEach(([week,title,tone,lessons], wi)=>{
+    const wrap=document.createElement('div'); wrap.className=`card week ${tone}`; wrap.style.marginBottom='16px';
+    const checked=lessons.filter((_,li)=>localStorage.getItem(`oa-lesson-${wi}-${li}`)==='1').length;
+    wrap.innerHTML=`<div class="kpi"><div><span class="badge">${week}</span> <span class="badge ${tone==='sage'?'sage':tone==='peach'?'peach':tone==='butter'?'butter':'blue'}">${title}</span></div><b>${checked}/${lessons.length}</b></div><div class="progressbar" style="margin:12px 0"><span style="width:${checked/lessons.length*100}%"></span></div>`;
+    lessons.forEach((lesson,li)=>{
+      const row=document.createElement('label'); row.className='lesson';
+      row.innerHTML=`<input type="checkbox" ${localStorage.getItem(`oa-lesson-${wi}-${li}`)==='1'?'checked':''} /> <div><div class="lesson-title">Lesson ${li+1}: ${lesson}</div><div class="lesson-meta">Study → practice → document a takeaway.</div></div>`;
+      row.querySelector('input').addEventListener('change',e=>{localStorage.setItem(`oa-lesson-${wi}-${li}`,e.target.checked?'1':'0'); updateStats(); renderRoadmap();});
+      wrap.appendChild(row);
+    });
+    host.appendChild(wrap);
+  });
+}
+
+const quiz = [
+['Which QA note is strongest?', ['“Not good.”','“Issue with response.”','“At 10:12, the response skipped the required verification step. Standard: verify before confirming. Impact: customer was given an incomplete answer.”','“You need to do better.”'],2],
+['What is the main purpose of version control in creative operations?', ['To make filenames longer','To avoid confusion about which asset is current','To remove all revisions','To guarantee performance'],1],
+['A recurring late submission appears across several employees. What should you do first?', ['Blame the slowest employee','Ignore it if the work eventually arrives','Review evidence and map the process to find the recurring cause','Change the deadline randomly'],2],
+['What makes a Senior VA “senior” in an operations context?', ['Doing more tasks at once','Working without documentation','Proactively managing priorities, risks, dependencies and follow-through','Never asking questions'],2],
+['When writing a company SOP, which is most important?', ['Making it sound formal','Using clear steps, owners, controls and exceptions','Making it as long as possible','Avoiding version numbers'],1],
+['For subscription-account QA, what should an audit focus on?', ['Only follower count','Only aesthetics','Activity consistency, communication quality, content operations, customer experience and risk','Guessing the creator’s intentions'],2],
+['What is the purpose of an HR compliance matrix?', ['To replace all policies','To connect requirements with evidence, owners, timing and review status','To score employees automatically','To avoid documentation'],1],
+['What should come first when handling a sensitive employee case?', ['Choose the outcome immediately','Collect and organize relevant facts and evidence','Discuss it publicly with coworkers','Delete old records'],1],
+['What does a PIP primarily provide?', ['A way to avoid measuring performance','A structured plan for addressing performance gaps with expectations, support and review points','A recruitment advertisement','A social media calendar'],1],
+['What is a core HRIS data-quality practice?', ['Allow unlimited duplicate records','Keep records accurate, current, controlled and traceable to source documents','Use personal devices without access rules','Skip change logs'],1],
+['What is a useful Operations Manager habit?', ['Manage only urgent tasks','Review capacity, KPIs, risks, blockers and ownership on a recurring cadence','Avoid dashboards','Change processes without evidence'],1]
+];
+function renderQuiz(){
+  const host=document.getElementById('quizArea'); host.innerHTML='';
+  quiz.forEach((q,qi)=>{
+    const card=document.createElement('div'); card.className='quiz'; card.style.marginBottom='14px';
+    card.innerHTML=`<h4>${qi+1}. ${q[0]}</h4>`;
+    q[1].forEach((opt,oi)=>{
+      const b=document.createElement('div'); b.className='opt'; b.textContent=opt; b.addEventListener('click',()=>{
+        card.querySelectorAll('.opt').forEach(x=>x.classList.remove('correct','wrong'));
+        b.classList.add(oi===q[2]?'correct':'wrong');
+      }); card.appendChild(b);
+    });
+    host.appendChild(card);
+  });
+}
+function renderGlossary(filter=''){
+  const host=document.getElementById('glossaryList'); host.innerHTML='';
+  gloss.filter(([term,def])=>(term+' '+def).toLowerCase().includes(filter.toLowerCase())).forEach(([term,def])=>{
+    const c=document.createElement('div'); c.className='card'; c.innerHTML=`<h4>${term}</h4><p>${def}</p>`; host.appendChild(c);
+  });
+}
+function updateStats(){
+  const total=curriculum.length*5; let done=0; curriculum.forEach(([week,title,tone,lessons],wi)=>lessons.forEach((_,li)=>{if(localStorage.getItem(`oa-lesson-${wi}-${li}`)==='1')done++;}));
+  document.getElementById('completedCount').textContent=done; document.getElementById('progressPct').textContent=Math.round(done/total*100)+'%';
+}
+
+function initProductivityLabs(){
+  document.querySelectorAll('[data-tool-check]').forEach(cb=>{
+    const key='oa-tool-'+cb.dataset.toolCheck;
+    cb.checked=localStorage.getItem(key)==='1';
+    cb.addEventListener('change',()=>localStorage.setItem(key,cb.checked?'1':'0'));
+  });
+  document.querySelectorAll('[data-tool-level]').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('#toolFilter button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const level=btn.dataset.toolLevel;
+      document.querySelectorAll('#toolLabGrid .tool-card').forEach(card=>{
+        card.style.display=(level==='all'||card.dataset.toolLevel===level)?'block':'none';
+      });
+    });
+  });
+}
+
+function scrollToSection(id){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.target===id));window.scrollTo({top:0,behavior:'smooth'});}
+function resetProgress(){if(confirm('Reset all lesson progress for this academy?')){for(let i=0;i<curriculum.length;i++)for(let j=0;j<5;j++)localStorage.removeItem(`oa-lesson-${i}-${j}`);updateStats();renderRoadmap();}}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>scrollToSection(b.dataset.target)));
+document.getElementById('glossarySearch').addEventListener('input',e=>renderGlossary(e.target.value));
+document.getElementById('studySearch').addEventListener('input',renderStudyGuide);
+document.getElementById('studyRoleSelect').addEventListener('change',e=>{if(e.target.value){window.currentStudyRole=e.target.value;renderStudyGuide();}});
+window.currentStudyRole='HR Operations';
+initProductivityLabs();
+renderRoadmap();renderQuiz();renderGlossary();renderStudyGuide();updateStats();
+</script>
+</body>
+</html>
